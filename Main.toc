@@ -1,0 +1,36 @@
+\contentsline {part}{I\hspace {1em}Basic Concepts}{3}{part.1}
+\contentsline {section}{\numberline {1}Definition and first examples}{3}{section.1}
+\contentsline {section}{\numberline {2}Ideals and homomorphisms }{9}{section.2}
+\contentsline {section}{\numberline {3}Solvable and nilpotent Lie algebras}{13}{section.3}
+\contentsline {part}{II\hspace {1em}Semisimple Lie Algebras}{16}{part.2}
+\contentsline {section}{\numberline {4}Theorems of Lie and Cartan}{16}{section.4}
+\contentsline {section}{\numberline {5}Killing form}{17}{section.5}
+\contentsline {section}{\numberline {6}Complete reducibility of representations}{20}{section.6}
+\contentsline {section}{\numberline {7}Representations of $\mathfrak {s}\mathfrak {l}(2,F)$}{24}{section.7}
+\contentsline {section}{\numberline {8}Root space decomposition}{28}{section.8}
+\contentsline {part}{III\hspace {1em}Root System}{31}{part.3}
+\contentsline {section}{\numberline {9}Axiomatics}{31}{section.9}
+\contentsline {section}{\numberline {10}Simple roots and Weyl group}{33}{section.10}
+\contentsline {section}{\numberline {11}Classification}{35}{section.11}
+\contentsline {section}{\numberline {12}Construction of root systems and automorphisms}{36}{section.12}
+\contentsline {section}{\numberline {13}Abstract theory of weights}{38}{section.13}
+\contentsline {part}{IV\hspace {1em}Isomorphism and Conjugacy Theorem}{41}{part.4}
+\contentsline {section}{\numberline {14}Isomorphism theorem}{41}{section.14}
+\contentsline {section}{\numberline {15}Cartan subalgebras}{41}{section.15}
+\contentsline {section}{\numberline {16}Conjugacy theorems}{42}{section.16}
+\contentsline {part}{V\hspace {1em}Existence Theorem}{43}{part.5}
+\contentsline {section}{\numberline {17}Universal enveloping algebras}{43}{section.17}
+\contentsline {section}{\numberline {18}Generators and relations}{43}{section.18}
+\contentsline {section}{\numberline {19}The simple algebras}{43}{section.19}
+\contentsline {part}{VI\hspace {1em}Representation Theory}{44}{part.6}
+\contentsline {section}{\numberline {20}Weights and maximal vectors}{44}{section.20}
+\contentsline {section}{\numberline {21}Finite dimensional modules}{44}{section.21}
+\contentsline {section}{\numberline {22}Multiplicity formula}{44}{section.22}
+\contentsline {section}{\numberline {23}Characters}{44}{section.23}
+\contentsline {section}{\numberline {24}Formulas of Weyl, Kostant, and Steinberg}{44}{section.24}
+\contentsline {part}{VII\hspace {1em}Chevalley Algebra and Groups}{45}{part.7}
+\contentsline {section}{\numberline {25}Chevalley basis of $L$}{45}{section.25}
+\contentsline {section}{\numberline {26}Kostant's Theorem}{45}{section.26}
+\contentsline {section}{\numberline {27}Admissible Lattices}{45}{section.27}
+\contentsline {part}{Index}{46}{section*.2}
+\contentsfinish 

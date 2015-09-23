@@ -1,0 +1,454 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%               A Common Setting File Made by Gau Syu
+%                              GauSyu@Gmail.com
+%
+%###########################################
+% @ Basic Document Packages
+%     @@ Latex Graphics
+%     @@ Index and Nomenclatures
+%     @@ Define Colors
+% @ Define Theorem Environments
+% @ Letters and Notations
+%     @@ Letters
+%     @@ Math Characters
+%     @@ Arrows
+%     @@ Functions
+%     @@ Terminology
+%     @@ Map Descriptions
+%     @@ Typical Commutative Diagrams
+%     @@ Arrows in Diagram
+%     @@ Words
+% @ Chapters and Sections
+%     @@ Others
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                          Basic Document Packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,a4paper,titlepage]{article}
+\usepackage{hyperref} % Able to Hyperref
+\usepackage{enumerate} % This package gives the enumerate environment an optional argument which determines the style in which the counter is printed.
+%
+%                                     Latex Graphics
+%
+\usepackage{graphicx}% Able to Insert Pictures
+\usepackage{epic} % Extending Latex Graphics
+\usepackage[all]{xy} % Able to Draw Diagrams
+\usepackage{tikz} % Able to Draw Pictures
+%
+%                           Index and Nomenclatures
+%
+\usepackage{makeidx}
+\makeindex
+%
+%                                    Define Colors
+%
+\usepackage{color}
+\newcommand{\red}{\color{red}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                        Define Theorem Environments
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,amsthm,amssymb,amsfonts,bbm,mathrsfs}
+
+\newtheorem{ex}{Exercise}[section]
+\renewcommand{\proofname}{\textbf{Solution}}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{exam}{Example}[section]
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                                Letters and Notations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                                           Letters
+%
+\def\Aa{{\cal A}}
+\def\Bb{{\cal B}}
+\def\Cc{{\cal C}}
+\def\Dd{{\cal D}}
+\def\Ee{{\cal E}}
+\def\Ff{{\cal F}}
+\def\Gg{{\cal G}}
+\def\Hh{{\cal H}}
+\def\Ii{{\cal I}}
+\def\Jj{{\cal J}}
+\def\Kk{{\cal K}}
+\def\Ll{{\cal L}}
+\def\Mm{{\cal M}}
+\def\Nn{{\cal N}}
+\def\Oo{{\cal O}}
+\def\Pp{{\cal P}}
+\def\Qq{{\cal Q}}
+\def\Rr{{\cal R}}
+\def\Ss{{\cal S}}
+\def\Tt{{\cal T}}
+\def\Uu{{\cal U}}
+\def\Vv{{\cal V}}
+\def\Ww{{\cal W}}
+\def\Xx{{\cal X}}
+\def\Yy{{\cal Y}}
+\def\Zz{{\cal Z}}
+
+\def\AA{{\mathbb A}}
+\def\BB{{\mathbb B}}
+\def\CC{{\mathbb C}}
+\def\DD{{\mathbb D}}
+\def\EE{{\mathbb E}}
+\def\FF{{\mathbb F}}
+\def\GG{{\mathbb G}}
+\def\HH{{\mathbb H}}
+\def\II{{\mathbb I}}
+\def\JJ{{\mathbb J}}
+\def\KK{{\mathbb K}}
+\def\LL{{\mathbb L}}
+\def\MM{{\mathbb M}}
+\def\NN{{\mathbb N}}
+\def\OO{{\mathbb O}}
+\def\PP{{\mathbb P}}
+\def\QQ{{\mathbb Q}}
+\def\RR{{\mathbb R}}
+\def\SS{{\mathbb S}}
+\def\TT{{\mathbb T}}
+\def\UU{{\mathbb U}}
+\def\VV{{\mathbb V}}
+\def\WW{{\mathbb W}}
+\def\XX{{\mathbb X}}
+\def\YY{{\mathbb Y}}
+\def\ZZ{{\mathbb Z}}
+
+\def\Aaa{\mathscr{A}}
+\def\Bbb{\mathscr{B}}
+\def\Ccc{\mathscr{C}}
+\def\Ddd{\mathscr{D}}
+\def\Eee{\mathscr{E}}
+\def\Fff{\mathscr{F}}
+\def\Ggg{\mathscr{G}}
+\def\Hhh{\mathscr{H}}
+\def\Iii{\mathscr{I}}
+\def\Jjj{\mathscr{J}}
+\def\Kkk{\mathscr{K}}
+\def\Lll{\mathscr{L}}
+\def\Mmm{\mathscr{M}}
+\def\Nnn{\mathscr{N}}
+\def\Ooo{\mathscr{O}}
+\def\Ppp{\mathscr{P}}
+\def\Qqq{\mathscr{Q}}
+\def\Rrr{\mathscr{R}}
+\def\Sss{\mathscr{S}}
+\def\Ttt{\mathscr{T}}
+\def\Uuu{\mathscr{U}}
+\def\Vvv{\mathscr{V}}
+\def\Www{\mathscr{W}}
+\def\Xxx{\mathscr{X}}
+\def\Yyy{\mathscr{Y}}
+\def\Zzz{\mathscr{Z}}
+
+\def\aa{\mathfrak{a}}
+\def\bb{\mathfrak{b}}
+\def\cc{\mathfrak{c}}
+\def\dd{\mathfrak{d}}
+\def\ee{\mathfrak{e}}
+\def\ff{\mathfrak{f}}
+\def\gg{\mathfrak{g}}  % Knuth uses $\gg$ for ``>>''.
+\def\hh{\mathfrak{h}}
+\def\ii{\mathfrak{i}}
+\def\jj{\mathfrak{j}}
+\def\kk{\mathfrak{k}}
+\def\ll{\mathfrak{l}}  % Knuth uses $\ll$ for ``<<''.
+\def\mm{\mathfrak{m}}
+\def\nn{\mathfrak{n}}
+\def\oo{\mathfrak{o}}
+\def\pp{\mathfrak{p}}
+\def\qq{\mathfrak{q}}
+\def\rr{\mathfrak{r}}
+\def\ss{\mathfrak{s}}
+\def\tt{\mathfrak{t}}
+\def\uu{\mathfrak{u}}
+\def\vv{\mathfrak{v}}
+\def\ww{\mathfrak{w}}
+\def\xx{\mathfrak{x}}
+\def\yy{\mathfrak{y}}
+\def\zz{\mathfrak{z}}
+
+\def\BBb{\mathfrak{B}}
+\def\CCc{\mathfrak{C}}
+\def\EEe{\mathfrak{E}}
+\def\FFf{\mathfrak{F}}
+\def\GGg{\mathfrak{G}}
+\def\SSs{\mathfrak{S}}
+\def\UUu{\mathfrak{U}}
+
+\def\aaa{{a}}
+\def\bbb{{b}}
+\def\ccc{{c}}
+\def\ddd{{d}}
+
+%
+%                                  Math Characters
+%
+\def\<{\langle}
+\def\>{\rangle}
+\def\anti{\mathpzc{S}}
+\def\ctimes{\textrm{\c{$\otimes$}}}
+\def\sminus{\smallsetminus}
+\def\Wedge{\mbox{$\bigwedge$}}
+\def\lrtimes{\Join}
+
+\def\Hodge{\widetilde{\Delta}}
+
+%
+%                                         Arrows
+%
+\def\acts{\curvearrowright}
+\def\epi{\twoheadrightarrow}
+\def\from{\leftarrow}
+\def\isom{\overset{\sim}{\to}}
+\def\longto{\longrightarrow}
+\def\mono{\rightarrowtail}
+\def\onto{\twoheadrightarrow}
+\def\injection{\hookrightarrow}
+\def\then{\Rightarrow}
+\def\To{\longto}
+\def\Ot{\longleftarrow}
+\def\tofrom{\leftrightarrow}
+\def\tto{\rightrightarrows}
+\def\down{\downarrow}
+
+%
+%                                          Functions
+%
+\newcommand{\norm}[1]{\lVert #1\rVert} % Norm
+\newcommand{\dual}[1]{{#1}^{\wedge}}% Dual
+\newcommand{\codual}[1]{{#1}^{\vee}}% Codual
+\newcommand{\pfrac}[2]{\frac{\partial{#1}}{\partial{#2}}}
+
+%
+%          Make index and red emphasis for terminology
+%
+\usepackage{xifthen}% provides \isempty test
+\newcommand{\termin}[2][]{%
+  \ifthenelse{\isempty{#1}}%
+    {\textbf{\upshape{#2}}\index{#2}}% if #1 is empty
+    {\textbf{\upshape{#1}}\index{#2}}% if #1 is not empty
+}
+
+\newcommand{\markar}[1]{\stackrel{{#1}}{\longrightarrow}}
+\newcommand{\markal}[1]{\stackrel{{#1}}{\longleftarrow}}
+\newcommand{\defen}{\stackrel{\text{def}}{\iff}}
+\newcommand{\local}[2]{\left.{#1}\right|_{#2}}%Local #1 at #2
+
+%
+%                                        Combinations
+%
+\newcommand{\exseq}[5]{{#1} \xrightarrow{{#2}} {#3} \xrightarrow{{#4}} {#5}}
+\newcommand{\longexseq}[5]{{#1} \markar{{#2}} {#3} \markar{{#4}} {#5}}
+\newcommand{\shortexseq}[5]{1\longrightarrow{#1}\xrightarrow{#2}{#3}\xrightarrow{#4}{#5}\longrightarrow{1}}
+\newcommand{\myldto}[1]{$\mathop{\rightsquigarrow}\limits_{\mathclap{\text{\scriptsize #1}}}$}
+\newcommand{\mysim}[1]{\mathop{\sim}\limits_{\mathclap{#1}}}
+\newcommand{\defeq}{\stackrel{\text{def}}{=}}
+%
+%                                    Map Descriptions
+%
+\newcommand{\mapdes}[4]
+  {
+    \begin{align*}
+       #1 & \longrightarrow #2 \\
+       #3 & \longmapsto #4
+    \end{align*}
+  }
+\newcommand{\longmapdes}[5]
+  {
+    \begin{align*}
+      #1\colon  #2 & \longrightarrow  #3 \\
+            #4 & \longmapsto  #5
+    \end{align*}
+  }
+\newcommand{\isodes}[4]
+  {
+    \begin{align*}
+      #1 & \cong  #2 \\
+      #3 & \leftrightarrow  #4
+    \end{align*}
+  }
+%
+%                        Typical Commutative Diagrams
+%
+\newcommand{\initial}[6]
+{
+\begin{displaymath}
+   \xymatrix{
+     {#1} \ar[r]^{#2} \ar[dr]_{#4} & {#3} \ar@{-->}[d]^{#6} \\
+     & {#5}
+   }
+\end{displaymath}
+}
+\newcommand{\terminal}[6]
+{
+\begin{displaymath}
+   \xymatrix{
+     {#5} \ar[dr]^{#4} \ar@{-->}[d]_{#6} & \\
+     {#3} \ar[r]_{#2} & {#1}
+   }
+\end{displaymath}
+}
+\newcommand{\functor}[8]
+{
+\begin{displaymath}
+   \xymatrix{
+     {#1}\ar[d]_{#2}\ar[r]^{#4} & {#5}\ar[d]^{#8} \\
+     {#3}\ar[r]_{#6} & {#7}
+   }
+\end{displaymath}
+}
+
+\newcommand{\Functor}[9]
+{
+\begin{displaymath}
+   \xymatrix{
+     {#1}\ar[rr]^{#2} & & {#3}\\
+     {#4}\ar[dd]^{#5}="a" \ar@{|->}[rr]  & & {#7}\ar[dd]_{#8}="b" \ar@{|->} "a";"b"\\
+     & & \\
+     {#6}\ar@{|->}[rr] & & {#9}
+   }
+\end{displaymath}
+}
+%
+%                                    Arrows in Diagram
+%
+\newdir{ (}{{}*!/-5pt/@^{(}}
+
+%
+%                                              Words
+%
+\DeclareMathOperator{\ab}{ab}%abelian group
+\DeclareMathOperator{\Ab}{\mathbf{Ab}}%category of abelian groups
+\DeclareMathOperator{\Abtf}{\mathbf{Ab}_{\mathrm{tf}}}%Abelian group with torsion-free
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\Add}{\mathbf{Add}}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\Alt}{Alt}
+\DeclareMathOperator{\an}{an}%Berkovich analytic space
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Bil}{Bil}%Bilinear
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\Card}{Card}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\cls}{cls}
+\DeclareMathOperator{\coim}{coim}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Cat}{\mathbf{Cat}}%category of all (small) categories
+\DeclareMathOperator{\di}{d}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator*{\dirlim}{\underrightarrow{\lim}}%direct limit
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\Der}{Der}%Derivations
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ev}{ev}
+\DeclareMathOperator{\et}{{\acute{e}t}}%\'{E}tale
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\filt}{\mathfrak{f}}%filtration  %\ff
+\DeclareMathOperator{\Fct}{\mathbf{Fct}}%Functor
+\DeclareMathOperator{\Fix}{Fix}%Fixed points
+\DeclareMathOperator{\Forget}{Forget}
+\DeclareMathOperator{\Free}{Free}
+\DeclareMathOperator{\Fun}{\mathbf{Fun}}
+\DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\Grp}{\mathbf{Grp}}%Category of groups
+\DeclareMathOperator{\Hess}{Hess}%Hessian
+\DeclareMathOperator{\Hom}{Hom}%Hom bifunctor
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator*{\invlim}{\underleftarrow{\lim}}%inverse limit
+\DeclareMathOperator{\id}{id}%Identity
+\DeclareMathOperator{\Id}{Id}%Identity
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Isw}{Isw}
+\DeclareMathOperator{\Is}{\mathfrak{Is}}%Isolator
+\DeclareMathOperator{\Lie}{\mathfrak{L}}%lie algebra
+\DeclareMathOperator{\Mod}{\mathbf{Mod}}%Module
+\DeclareMathOperator{\Mor}{Mor}
+\DeclareMathOperator{\ML}{\mathbf{M.L.}}
+\DeclareMathOperator{\nat}{nat}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\ob}{ob}%Object
+\DeclareMathOperator{\obj}{\mathcal{T}}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\one}{\mathbf{1}}
+\DeclareMathOperator{\op}{op}%opposite ring
+\DeclareMathOperator{\Op}{\mathcal{O}\mathfrak{p}\mathrm{ext}}%the sets of congruence classes of extensions
+\DeclareMathOperator{\Pic}{Pic}%Picard group
+\DeclareMathOperator{\prim}{prim}
+\DeclareMathOperator{\Quot}{Qout}%Quotient functor
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Set}{\mathbf{Set}}%Category of sets
+\DeclareMathOperator{\Span}{span} % Annoyingly, \span is already a command in TeX, and redefining it leads to other problems.
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Sw}{Sw} % Swan conductor
+\DeclareMathOperator{\Split}{\mathbf{Split}}%Karoubi envelope
+\DeclareMathOperator{\Sub}{Sub}%Sub functor
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Top}{Top}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\tor}{tor}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Vect}{Vect}
+
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\PSL}{PSL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\GO}{O}
+\DeclareMathOperator{\SP}{Sp}
+\DeclareMathOperator{\Spin}{Spin}
+\DeclareMathOperator{\SU}{SU}
+\DeclareMathOperator{\GU}{U}
+\DeclareMathOperator{\Pt}{Pt}
+
+\def\gl{\gg\ll}
+\def\sl{\ss\ll}
+\def\so{\ss\oo}
+\def\sp{\ss\pp}
+\def\su{\ss\uu}
+
+\def\st{\textrm{ s.t. }}
+\def\RP{\mathbb{R}\mathbf{P}}
+\def\Real{\mathbb{R}}
+
+\DeclareMathOperator{\Br}{Br}
+\renewcommand{\mod}{\mathop{\mathrm{mod}}}
+
+%
+%                              Chapters and Sections
+%
+%\usepackage[Lenny]{fncychap}% Chapter Style
+\setcounter{secnumdepth}{1}% Depth of Sections
+\usepackage{titletoc}
+\setcounter{tocdepth}{1}% Depth of Contents
+\titlecontents{section}[18pt]{\addvspace{2pt}\filright}
+              {\contentspush{\thecontentslabel\ }}
+              {}{\titlerule*[8pt]{.}\contentspage}
+\numberwithin{equation}{section}
+\renewcommand{\partname}{Chapter}
+%%%% Others %%%%
+%\renewcommand{\labelitemi}{$\divideontimes$}
+\usepackage[text={150mm,230mm},centering]{geometry}   %page

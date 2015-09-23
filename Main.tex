@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                        A Tex File Made by Gau Syu
+%                              GauSyu@Gmail.com
+%
+%###########################################
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                     Include The Common Settings
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{common}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                                 PDF File Information
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{
+             pdftitle={Notes for GTM 9},
+             pdfauthor={Gau Syu},
+             pdfsubject={Lie Algebra},
+             pdfkeywords={Lie algebra, Representation theory},
+             pdfproducer={XeLaTeX},
+    colorlinks=true,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                                           Title
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{{Notes for }\\ {\Huge\textsc{Humphreys'}}\\ GTM 9}
+\author{Take note: Gau Syu}
+\date{\emph{\small Last Update: \today}}
+
+\begin{document}
+\maketitle
+%\include{Preface}
+
+\tableofcontents
+
+\pagestyle{plain}
+
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{Chapter4}
+\include{Chapter5}
+\include{Chapter6}
+\include{Chapter7}
+
+\newpage
+
+%Chapter=Bibliography
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Bibliography}
+%\bibliographystyle{unsrt}
+%\bibliography{SFAG}
+%\newpage
+%Chapter=Index
+\phantomsection
+\addcontentsline{toc}{part}{Index}
+\printindex
+\end{document}

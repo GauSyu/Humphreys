@@ -1,0 +1,568 @@
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2013.5.17)  28 JUL 2013 11:04
+entering extended mode
+**Common.tex
+(D:\中星圣的同步盘\笔记\2013笔记\李代数\Common.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+(C:\CTEX\MiKTeX\tex\latex\base\article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(C:\CTEX\MiKTeX\tex\latex\base\size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+Requested font "cmr10" at 10.95pt
+ -> cmr10
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\CTEX\MiKTeX\tex\latex\hyperref\hyperref.sty
+Package: hyperref 2012/02/06 v6.82o Hypertext links for LaTeX
+
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-hyperref.sty
+Package: hobsub-hyperref 2011/04/23 v1.4 Bundle oberdiek, subset hyperref (HO)
+
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-generic.sty
+Package: hobsub-generic 2011/04/23 v1.4 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2011/04/23 v1.4 Subsetting bundle oberdiek (HO)
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+Package: pdfescape 2011/04/04 v1.12 Provides string conversions (HO)
+Package: bigintcalc 2011/01/30 v1.2 Expandable big integer calculations (HO)
+Package: bitset 2011/01/30 v1.1 Data type bit set (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provides unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/01/30 v1.0 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/04/23 v1.7 Hooks at very end of document (HO)
+Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
+Package: refcount 2010/12/01 v3.2 Data extraction from references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
+)
+(C:\CTEX\MiKTeX\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(C:\CTEX\MiKTeX\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+)
+\@linkdim=\dimen103
+\Hy@linkcounter=\count88
+\Hy@pagecounter=\count89
+
+(C:\CTEX\MiKTeX\tex\latex\hyperref\pd1enc.def
+File: pd1enc.def 2012/02/06 v6.82o Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count90
+
+(C:\CTEX\MiKTeX\tex\latex\00miktex\hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4046.
+Package hyperref Info: Link nesting OFF on input line 4051.
+Package hyperref Info: Hyper index ON on input line 4054.
+Package hyperref Info: Plain pages OFF on input line 4061.
+Package hyperref Info: Backreferencing OFF on input line 4066.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4284.
+\c@Hy@tempcnt=\count91
+
+(C:\CTEX\MiKTeX\tex\xelatex\xetexurl\url.sty
+\Urlmuskip=\muskip10
+Package: url 2004/03/15  ver 3.1  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4637.
+\Fld@menulength=\count92
+\Field@Width=\dimen104
+\Fld@charsize=\dimen105
+Package hyperref Info: Hyper figures OFF on input line 5757.
+Package hyperref Info: Link nesting OFF on input line 5762.
+Package hyperref Info: Hyper index ON on input line 5765.
+Package hyperref Info: backreferencing OFF on input line 5772.
+Package hyperref Info: Link coloring OFF on input line 5777.
+Package hyperref Info: Link coloring with OCG OFF on input line 5782.
+Package hyperref Info: PDF/A mode OFF on input line 5787.
+LaTeX Info: Redefining \ref on input line 5827.
+LaTeX Info: Redefining \pageref on input line 5831.
+\Hy@abspage=\count93
+\c@Item=\count94
+\c@Hfootnote=\count95
+)
+
+Package hyperref Message: Driver (autodetected): hxetex.
+
+(C:\CTEX\MiKTeX\tex\latex\hyperref\hxetex.def
+File: hxetex.def 2012/02/06 v6.82o Hyperref driver for XeTeX
+
+(C:\CTEX\MiKTeX\tex\latex\hyperref\puenc.def
+File: puenc.def 2012/02/06 v6.82o Hyperref: PDF Unicode definition (HO)
+)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\stringenc.sty
+Package: stringenc 2010/03/01 v1.8 Converts strings between encodings (HO)
+)
+\pdfm@box=\box26
+\c@Hy@AnnotLevel=\count96
+\HyField@AnnotCount=\count97
+\Fld@listcount=\count98
+\c@bookmark@seq@number=\count99
+
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
+(rerunfilecheck)             (e.g. pdfTeX or LuaTeX with package `pdftexcmds').
+
+(rerunfilecheck)             Therefore file contents cannot be checked efficien
+tly
+(rerunfilecheck)             and the loading of the package is aborted.
+)
+\Hy@SectionHShift=\skip43
+)
+(C:\CTEX\MiKTeX\tex\latex\tools\enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks15
+)
+(C:\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\CTEX\MiKTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\CTEX\MiKTeX\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(C:\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: xetex.def on input line 91.
+
+(C:\CTEX\MiKTeX\tex\xelatex\xetex-def\xetex.def
+File: xetex.def 2009/11/22 v0.94 LaTeX color/graphics driver for XeTeX (RRM/JK)
+
+))
+\Gin@req@height=\dimen106
+\Gin@req@width=\dimen107
+)
+(C:\CTEX\MiKTeX\tex\latex\eepic\epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+\@@multicnt=\count100
+\d@lta=\count101
+\@delta=\dimen108
+\@@delta=\dimen109
+\@gridcnt=\count102
+\@joinkind=\count103
+\@dotgap=\dimen110
+\@ddotgap=\dimen111
+\@x@diff=\count104
+\@y@diff=\count105
+\x@diff=\dimen112
+\y@diff=\dimen113
+\@dotbox=\box27
+\num@segments=\count106
+\num@segmentsi=\count107
+\@datafile=\read1
+) (C:\CTEX\MiKTeX\tex\generic\xypic\xy.sty
+(C:\CTEX\MiKTeX\tex\generic\xypic\xy.tex Bootstrap'ing: catcodes, docmode,
+(C:\CTEX\MiKTeX\tex\generic\xypic\xyrecat.tex)
+(C:\CTEX\MiKTeX\tex\generic\xypic\xyidioms.tex)
+
+ Xy-pic version 3.8.6 <2011/05/27>
+ Copyright (c) 1991-2011 by Kristoffer H. Rose <krisrose@tug.org>
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts;
+Requested font "xydash10" scaled 1000
+ -> xydash10
+Requested font "xyatip10" scaled 1000
+ -> xyatip10
+Requested font "xybtip10" scaled 1000
+ -> xybtip10
+Requested font "xybsql10" scaled 1000
+ -> xybsql10
+Requested font "xycirc10" scaled 1000
+ -> xycirc10
+ allocations: state,
+\X@c=\dimen114
+\Y@c=\dimen115
+\U@c=\dimen116
+\D@c=\dimen117
+\L@c=\dimen118
+\R@c=\dimen119
+\Edge@c=\toks16
+\X@p=\dimen120
+\Y@p=\dimen121
+\U@p=\dimen122
+\D@p=\dimen123
+\L@p=\dimen124
+\R@p=\dimen125
+\Edge@p=\toks17
+\X@origin=\dimen126
+\Y@origin=\dimen127
+\X@xbase=\dimen128
+\Y@xbase=\dimen129
+\X@ybase=\dimen130
+\Y@ybase=\dimen131
+\X@min=\dimen132
+\Y@min=\dimen133
+\X@max=\dimen134
+\Y@max=\dimen135
+\lastobjectbox@=\box28
+\zerodotbox@=\box29
+\almostz@=\dimen136
+ direction,
+\d@X=\dimen137
+\d@Y=\dimen138
+\K@=\count108
+\KK@=\count109
+\Direction=\count110
+\K@dXdY=\dimen139
+\K@dYdX=\dimen140
+\xyread@=\read2
+\xywrite@=\write3
+\csp@=\count111
+\quotPTK@=\dimen141
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks18
+\connectobjectbox@@=\box30
+ objects,
+\styletoks@=\toks19
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+Package: xy 2011/05/27 Xy-pic version 3.8.6
+ (C:\CTEX\MiKTeX\tex\generic\xypic\xyall.tex  Xy-pic option: All features v.3.8
+
+(C:\CTEX\MiKTeX\tex\generic\xypic\xycurve.tex
+ Xy-pic option: Curve and Spline extension v.3.12 curve,
+\crv@cnt@=\count112
+\crvpts@=\toks20
+\splinebox@=\box31
+\splineval@=\dimen142
+\splinedepth@=\dimen143
+\splinetol@=\dimen144
+\splinelength@=\dimen145
+ circles,
+\L@=\dimen146
+ loaded)
+(C:\CTEX\MiKTeX\tex\generic\xypic\xyframe.tex
+ Xy-pic option: Frame and Bracket extension v.3.13 loaded)
+(C:\CTEX\MiKTeX\tex\generic\xypic\xycmtip.tex
+ Xy-pic option: Computer Modern tip extension v.3.7
+(C:\CTEX\MiKTeX\tex\generic\xypic\xytips.tex
+ Xy-pic option: More Tips extension v.3.9
+Requested font "xycmat10" scaled 1000
+ -> xycmat10
+Requested font "xycmbt10" scaled 1000
+ -> xycmbt10
+Requested font "xyluat10" scaled 1000
+ -> xyluat10
+Requested font "xylubt10" scaled 1000
+ -> xylubt10
+ loaded) loaded)
+(C:\CTEX\MiKTeX\tex\generic\xypic\xyline.tex
+ Xy-pic option: Line styles extension v.3.10
+\xylinethick@=\dimen147
+ loaded)
+(C:\CTEX\MiKTeX\tex\generic\xypic\xyrotate.tex
+ Xy-pic option: Rotate and Scale extension v.3.8 loaded)
+(C:\CTEX\MiKTeX\tex\generic\xypic\xycolor.tex
+ Xy-pic option: Colour extension v.3.11 loaded)
+(C:\CTEX\MiKTeX\tex\generic\xypic\xymatrix.tex
+ Xy-pic option: Matrix feature v.3.14
+\Row=\count113
+\Col=\count114
+\queue@=\toks21
+\queue@@=\toks22
+\qcount@=\count115
+\qcount@@=\count116
+\matrixsize@=\count117
+ loaded)
+(C:\CTEX\MiKTeX\tex\generic\xypic\xyarrow.tex
+ Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
+(C:\CTEX\MiKTeX\tex\generic\xypic\xygraph.tex
+ Xy-pic option: Graph feature v.3.11 loaded) loaded))
+(C:\CTEX\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
+(C:\CTEX\MiKTeX\tex\latex\pgf\basiclayer\pgf.sty
+(C:\CTEX\MiKTeX\tex\latex\pgf\utilities\pgfrcs.sty
+(C:\CTEX\MiKTeX\tex\generic\pgf\utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks23
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\utilities\pgfutil-latex.def
+\pgfutil@abb=\box32
+
+(C:\CTEX\MiKTeX\tex\latex\ms\everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(C:\CTEX\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
+))
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+
+(C:\CTEX\MiKTeX\tex\latex\pgf\basiclayer\pgfcore.sty
+(C:\CTEX\MiKTeX\tex\latex\pgf\systemlayer\pgfsys.sty
+(C:\CTEX\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+
+(C:\CTEX\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks24
+\pgfkeys@temptoks=\toks25
+
+(C:\CTEX\MiKTeX\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks26
+))
+\pgf@x=\dimen148
+\pgf@y=\dimen149
+\pgf@xa=\dimen150
+\pgf@ya=\dimen151
+\pgf@xb=\dimen152
+\pgf@yb=\dimen153
+\pgf@xc=\dimen154
+\pgf@yc=\dimen155
+\w@pgf@writea=\write4
+\r@pgf@reada=\read3
+\c@pgf@counta=\count118
+\c@pgf@countb=\count119
+\c@pgf@countc=\count120
+\c@pgf@countd=\count121
+
+(C:\CTEX\MiKTeX\tex\generic\pgf\systemlayer\pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-xetex.def on input line 900.
+
+(C:\CTEX\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-xetex.def
+File: pgfsys-xetex.def 2010/02/16  (rcs-revision 1.3)
+
+(C:\CTEX\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-common-pdf-via-dvi.def
+File: pgfsys-common-pdf-via-dvi.def 2008/05/19  (rcs-revision 1.7)
+)))
+(C:\CTEX\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count122
+\pgfsyssoftpath@bigbuffer@items=\count123
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(C:\CTEX\MiKTeX\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(C:\CTEX\MiKTeX\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+
+(C:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmath.code.tex
+(C:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathcalc.code.tex
+(C:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathutil.code.tex)
+(C:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen156
+\pgfmath@count=\count124
+\pgfmath@box=\box33
+\pgfmath@toks=\toks27
+\pgfmath@stack@operand=\toks28
+\pgfmath@stack@operation=\toks29
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.code.tex
+(C:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex)
+(C:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex)
+(C:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.random.code.tex)
+(C:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex)
+(C:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.base.code.tex)
+(C:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.round.code.tex)
+(C:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex)))
+(C:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count125
+))
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen157
+\pgf@picmaxx=\dimen158
+\pgf@picminy=\dimen159
+\pgf@picmaxy=\dimen160
+\pgf@pathminx=\dimen161
+\pgf@pathmaxx=\dimen162
+\pgf@pathminy=\dimen163
+\pgf@pathmaxy=\dimen164
+\pgf@xx=\dimen165
+\pgf@xy=\dimen166
+\pgf@yx=\dimen167
+\pgf@yy=\dimen168
+\pgf@zx=\dimen169
+\pgf@zy=\dimen170
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen171
+\pgf@path@lasty=\dimen172
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen173
+\pgf@shorten@start@additional=\dimen174
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
+\pgfpic=\box34
+\pgf@hbox=\box35
+\pgf@layerbox@main=\box36
+\pgf@picture@serial@count=\count126
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen175
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen176
+\pgf@pt@y=\dimen177
+\pgf@pt@temp=\dimen178
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen179
+\pgf@sys@shading@range@num=\count127
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
+\pgfexternal@startupbox=\box37
+))
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+)))
+(C:\CTEX\MiKTeX\tex\generic\pgf\modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
+\pgfnodeparttextbox=\box38
+)
+(C:\CTEX\MiKTeX\tex\generic\pgf\modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
+)
+(C:\CTEX\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen180
+\pgf@nodesepend=\dimen181
+)
+(C:\CTEX\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
+))
+(C:\CTEX\MiKTeX\tex\latex\pgf\utilities\pgffor.sty
+(C:\CTEX\MiKTeX\tex\latex\pgf\utilities\pgfkeys.sty
+(C:\CTEX\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex))
+(C:\CTEX\MiKTeX\tex\generic\pgf\utilities\pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen182
+\pgffor@skip=\dimen183
+\pgffor@stack=\toks30
+\pgffor@toks=\toks31
+))
+(C:\CTEX\MiKTeX\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
+
+(C:\CTEX\MiKTeX\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count128
+\pgfplotmarksize=\dimen184
+)
+\tikz@lastx=\dimen185
+\tikz@lasty=\dimen186
+\tikz@lastxsaved=\dimen187
+\tikz@lastysaved=\dimen188
+\tikzleveldistance=\dimen189
+\tikzsiblingdistance=\dimen190
+\tikz@figbox=\box39
+\tikz@tempbox=\box40
+\tikztreelevel=\count129
+\tikznumberofchildren=\count130
+\tikznumberofcurrentchild=\count131
+\tikz@fig@count=\count132
+
+(C:\CTEX\MiKTeX\tex\generic\pgf\modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count133
+\pgfmatrixcurrentcolumn=\count134
+\pgf@matrix@numberofcolumns=\count135
+)
+\tikz@expandcount=\count136
+
+(C:\CTEX\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths
+.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+))) (C:\CTEX\MiKTeX\tex\latex\base\makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(C:\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(C:\CTEX\MiKTeX\tex\latex\ams\math\amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(C:\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty

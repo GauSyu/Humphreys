@@ -1,0 +1,829 @@
+\part{Semisimple Lie Algebras}
+\section{Theorems of Lie and Cartan}
+
+
+
+\begin{ex}\label{4.1}
+  Let $L = \sl(V )$. Use Lie's Theorem to prove that $\Rad L = Z(L)$, conclude that $L$ is semisimple (cf. Exercise \ref{2.3}).
+\end{ex}
+\begin{proof}
+    Observe that $\Rad L$ lies in each maximal solvable subalgebra $B$ of $L$. Select a basis of $V$ so that $B = L\cap\tt(n,F)$, and notice that the transpose of $B$ is also a maximal solvable subalgebra of $L$. Conclude that $\Rad L \subset L\cap\dd(n,F)$, then that $\Rad L = Z(L)$.
+\end{proof}
+
+\begin{ex}
+  Show that the proof of Theorem 4.1 still goes through in prime characteristic, provided $\dim V$ is less than $\Char F$.
+\end{ex}
+\begin{proof}
+  The only part in which $\Char F = 0$ is used in the proof of Theorem 4.1 is to show that $n\lambda([x,y]) = 0$ implies $\lambda([x,y]) = 0$. Here $n < \dim V$ , so using our relaxed condition, this implication still holds.
+\end{proof}
+
+\begin{ex}\label{4.3}
+  This exercise illustrates the failure of Lie's Theorem when $F$ is allowed to have prime characteristic $p$. Consider the $p \times p$ matrices:
+  \begin{equation*}
+    x=\begin{pmatrix}
+        0 & 1 & 0 & \cdots & 0 \\
+        0 & 0 & 1 & \cdots & 0 \\
+        \cdots & \cdots & \cdots & \cdots & \cdots \\
+        0 & 0 & 0 & \cdots & 1 \\
+        1 & 0 & 0 & \cdots & 0 \\
+      \end{pmatrix},
+      \quad y=\diag(0,1,2,3,\cdots,p-1)
+  \end{equation*}
+
+  Check that $[x, y] = x$, hence that $x$ and $y$ span a two dimensional solvable subalgebra $L$ of $\gl(p, F)$. Verify that $x, y$ have no common eigenvector.
+\end{ex}
+\begin{proof}
+  $[x, y] = x$. However, the eigenvectors of $y$ are the standard basis vectors, and none of these are eigenvectors for $x$ since it operates by shifting entries.
+\end{proof}
+
+\begin{ex}
+  When $p = 2$, Exercise \ref{3.3} show that a solvable Lie algebra of endomorphisms over a field of prime characteristic $p$ need not have derived algebra consisting of nilpotent endomorphisms (cf. Corollary C of Theorem 4.1). For arbitrary $p$, construct a counterexample to Corollary C as follows: Start with $L \subset \gl(p,F)$ as in Exercise \ref{4.3}. Form the vector space direct sum $M = L + F^p$, and make $M$ a Lie algebra by decreeing that $F^p$ is abelian, while $L$ has its usual product and acts on $F^p$ in the given way. Verify that $M$ is solvable, but that its derived algebra ($= Fx + F^p$) fails to be nilpotent.
+\end{ex}
+
+\begin{ex}
+  If $x, y \in \End V$ commute, prove that $(x + y)_s = x_s + y_s$, and $(x + y)_n = x_n + y_n$. Show by example that this can fail if $x,y$ fail to commute. [Hint: Show first that $x, y$ semisimple (resp. nilpotent) implies $x+y$ semisimple (resp. nilpotent).]
+\end{ex}
+\begin{proof}
+  For a counterexample when $x$ and $y$ do not commute, take $x = \begin{pmatrix}
+                                                                    \begin{smallmatrix}
+                                                                    0 & 1 \\
+                                                                    0 & 0\\
+                                                                    \end{smallmatrix}
+                                                                  \end{pmatrix}$
+                                                                  and $y = \begin{pmatrix}
+                                                                             \begin{smallmatrix}
+                                                                             0 & 0 \\
+                                                                             1 & 0 \\
+                                                                             \end{smallmatrix}
+                                                                           \end{pmatrix}$.
+  Then both $x$ and $y$ are nilpotent, but $x + y$ is not nilpotent because its eigenvalues are $\pm 1$.
+\end{proof}
+
+\begin{ex}
+  Check formula
+  \begin{equation*}
+    (\delta-(a+b).1)^n(xy)=\sum_{i=0}^n \binom{n}{i} ((\delta-a.1)^{n-i}x)\cdot((\delta-b.1)^iy)
+  \end{equation*}
+\end{ex}
+
+\begin{ex}\label{4.7}
+  Prove the converse of Theorem 4.3.
+\end{ex}
+\begin{proof}
+  The converse of Theorem 4.3 says that if $L$ is a solvable subalgebra of $\gl(V)$ where $\dim V < 1$, then $\Tr(xy) = 0$ for all $x \in [L,L]$ and $y \in L$. By Lie's theorem, we may choose a basis for $V$ such that $L$ consists of upper triangular matrices. Then $x \in [L,L]$ is a strictly upper triangular matrix, and hence so is $yx$. Finally, $tr(xy) = tr(yx) = 0$, so we are done.
+\end{proof}
+
+\begin{ex}
+  Note that it suffices to check the hypothesis of Theorem 4.3 (or its corollary) for $x,y$ ranging over a basis of $[L,L]$, resp.$L$. For the example given in Exercise \ref{ex1.2}, verify solvability by using Cartan's criterion.
+\end{ex}
+\begin{proof}
+  In the example given in Exercise \ref{ex1.2},
+  \begin{equation*}
+    \ad x = \begin{pmatrix}
+              0 & 0 & 0 \\
+              0 & 0 & 1 \\
+              0 & 1 & 0 \\
+            \end{pmatrix},
+    \ad y = \begin{pmatrix}
+              0 & 0 & 0 \\
+              0 & 0 & 0 \\
+              -1 & 0 & 0 \\
+            \end{pmatrix},
+    \ad z =  \begin{pmatrix}
+              0 & 0 & 0 \\
+              -1 & 0 & 0 \\
+              0 & 0 & 0 \\
+            \end{pmatrix}
+  \end{equation*}
+
+  Also, $[L,L]$ is spanned by $y$ and $z$. Hence $\Tr(\ad x \ad y) = \Tr(\ad x \ad z) = \Tr(\ad y \ad z) = 0$, so $L$ is solvable.
+\end{proof}
+
+\section{Killing form}
+
+
+
+
+\begin{ex}
+  Prove that if $L$ is nilpotent, the Killing form of $L$ is identically zero.
+\end{ex}
+\begin{proof}
+  Pick $x, y \in L$. Then $\ad([x, y])$ is nilpotent, and hence $\Tr(\ad([x, y])) = 0$. This implies $\Tr(\ad x \ad y) = -\Tr(\ad y \ad x)$, but $\Tr(\ad x \ad y) = \Tr(\ad y \ad x)$ then gives that $\Tr(\ad x \ad y) = 0$, so the Killing form of $L$ is identically zero.
+\end{proof}
+
+\begin{ex}
+  Prove that $L$ is solvable if and only if $[LL]$ lies in the radical of the Killing form.
+\end{ex}
+\begin{proof}
+  If $L$ is solvable, then $[L,L]$ lies in the radical of the Killing form by the corollary to Theorem 4.3. The converse is Exercise \ref{4.7}.
+\end{proof}
+
+\begin{ex}\label{5.3}
+  Let $L$ be the two dimensional non-abelian Lie algebra of Exercise \ref{1.4}, which is solvable. Prove that $L$ has nontrivial Killing form.
+\end{ex}
+\begin{proof}
+  The image of the adjoint representation of $L$ is a subalgebra of $\gl(2,F)$ with basis elements $\ad x=\begin{pmatrix}
+           \begin{smallmatrix}
+           0 & 1\\
+           0 & 0 \\
+           \end{smallmatrix}
+         \end{pmatrix}
+  , \ad y=\begin{pmatrix}
+           \begin{smallmatrix}
+           -1 & 0\\
+           0 & 0 \\
+           \end{smallmatrix}
+         \end{pmatrix}$.
+  So $\Tr(\ad x \ad x) = 1$, and hence the Killing form of $L$ is nontrivial.
+\end{proof}
+
+\begin{ex}
+  Let $L$ be the three dimensional solvable Lie algebra of Exercise \ref{ex1.2}. Compute the radical of its Killing form.
+\end{ex}
+\begin{proof}
+  We compute the matrix of Killing Form $\kappa$ relative to the basis $(x, y, z)$:
+  \begin{equation*}
+    \kappa=
+    \begin{pmatrix}
+      2 & 0 & 0 \\
+      0 & 0 & 0 \\
+      0 & 0 & 0 \\
+    \end{pmatrix}
+  \end{equation*}
+
+  Let $s = ax + by + cz$ be any element in the radical $S$ of $\kappa$. Then
+  \begin{equation*}
+    (a,b,c)
+    \begin{pmatrix}
+      2 & 0 & 0 \\
+      0 & 0 & 0 \\
+      0 & 0 & 0 \\
+    \end{pmatrix}
+    =0
+  \end{equation*}
+
+  So $a=0$, and we see that $S$ is spanned by $y$ and $z$.
+\end{proof}
+
+\begin{ex}\label{5.5}
+  Let $L = \sl(2,F)$. Compute the basis of $L$ dual to the standard basis, relative to the Killing form.
+\end{ex}
+\begin{proof}
+  The matrix of the Killing form relative to the basis $(x,h,y)$ is
+  \begin{equation*}
+    \begin{pmatrix}
+      0 & 0 & 4 \\
+      0 & 8 & 0 \\
+      4 & 0 & 0 \\
+    \end{pmatrix}
+  \end{equation*}
+
+  The basis of $L$ dual to the standard basis is $(\frac{1}{4}y, \frac{1}{8}h, \frac{1}{4}x)$.
+\end{proof}
+
+\begin{ex}
+  Let $\Char F = p \neq 0$. Prove that $L$ is semisimple if its Killing form is nondegenerate. Show by example that the converse fails. [Look at $\sl(3,F)$ modulo its center, when $\Char F = 3$.]
+\end{ex}
+\begin{proof}
+  If $\Rad(L) \neq 0$, the last nonzero term $I$ in its derived series is a abelian subalgebra of $L$, and by Exercise \ref{3.1}, $I$ is a ideal of $L$. In another words, $L$ has a nonzero abelian ideal. It is suffice to prove any abelian ideal of $L$ is zero.
+
+  Let $S$ be the radical of the Killing form, which is nondegenerate. So $S = 0$. To prove that $L$ is semisimple, it will suffice to prove that every abelian ideal $I$ of $L$ is included in $S$. Suppose $x \in I, y \in L$. Then $\ad x\ad y$ maps $L\to L \to I$, and $(\ad x \ad y)^2$ maps $L$ into $[II] = 0$. This means that $\ad x \ad y$ is nilpotent, hence that $0 = \Tr(\ad x \ad y) = \kappa(x,y)$, so $I \subset S = 0$.
+\end{proof}
+
+\begin{ex}
+  Relative to the standard basis of $\sl(3,F)$, compute the determinant of $\kappa$. Which primes divide it?
+\end{ex}
+\begin{proof}
+  We write down the matrix of $\ad x$ relative to basis
+  \begin{equation*}
+  \{e_{11} - e_{22}, e_{22} - e_{33}, e_{12}, e_{13}, e_{21}, e_{23}, e_{31}, e_{33}\}
+  \end{equation*}
+  when $x$ runs over this basis.
+
+  \begin{align*}
+    \ad(e_{11} - e_{22}) &= \diag(0, 0, 2, 1,-2,-1,-1, 1) \\
+    \ad(e_{22} - e_{33}) &= \diag(0, 0,-1, 1, 1, 2,-1,-2)
+  \end{align*}
+  \begin{align*}
+    \ad e_{12} &= \begin{pmatrix}
+                    0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    -2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & -1 & 0 \\
+                  \end{pmatrix} \\
+    \ad e_{21} &= \begin{pmatrix}
+                    0 & 0 & -1 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    2 & -1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & -1 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                  \end{pmatrix} \\
+    \ad e_{13} &= \begin{pmatrix}
+                    0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+                    -1 & -1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & -1 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                  \end{pmatrix} \\
+    \ad e_{31} &= \begin{pmatrix}
+                    0 & 0 & 0 & -1 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & -1 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & -1 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+                  \end{pmatrix} \\
+    \ad e_{23} &= \begin{pmatrix}
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & -1 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+                    1 & -2 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                  \end{pmatrix} \\
+    \ad e_{32} & = \begin{pmatrix}
+                     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                     0 & 0 & 0 & 0 & 0 & -1 & 0 & 0 \\
+                     0 & 0 & 0 & -1 & 0 & 0 & 0 & 0 \\
+                     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                     0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+                     -1 & 2 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                   \end{pmatrix}
+  \end{align*}
+
+  The matrix of the Killing form relative to this basis is
+  \begin{equation*}
+    \kappa=
+    \begin{pmatrix}
+      12 & -6 & 0 & 0 & 0 & 0 & 0 & 0 \\
+      -6 & 12 & 0 & 0 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 6 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0 & 0 & 6 & 0 \\
+      0 & 0 & 6 & 0 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0 & 0 & 0 & 6 \\
+      0 & 0 & 0 & 6 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0 & 6 & 0 & 0 \\
+    \end{pmatrix}
+  \end{equation*}
+
+  Its determinant is $\det(\kappa) = 2^83^9$, so prime $2$ and $3$ divide the determinant of $\kappa$.
+\end{proof}
+
+\begin{ex}
+  Let $L = L_1 \oplus \cdots \oplus L_t$ be the decomposition of a semisimple Lie algebra $L$ into its simple ideals. Show that the semisimple and nilpotent parts of $x \in L$ are the sums of the semisimple and nilpotent parts in the various $L_i$ of the components of $x$.
+\end{ex}
+\begin{proof}
+  Write $x = x_1+\cdots+x_t$ where $x_i \in L_i$. We can decompose each $x_i$ as $x_{i,s}+x_{i,n}$ where $x_{i,s}$ is semisimple and $x_{i,n}$ is nilpotent. Note that $\ad x_i$ and $\ad x_j$ commute since $[x_i, x_j] = 0$.
+  Hence $\ad x_{i,s}$ and $\ad x_{j,s}$ commute, as well as $\ad x_{i,n}$ and $\ad x_{j,n}$. This means that $x_{1,s}+\cdots+x_{t,s}$ is semisimple and that $x_{1,n} + \cdots + x_{t,n}$ is nilpotent, so by uniqueness of Jordan-Chevalley decomposition, we conclude that $x_s = x_{1,s} + \cdots + x_{t,s}$ and that $x_n = x_{1,n} + \cdots + x_{t,n}$.
+\end{proof}
+
+\section{Complete reducibility of representations}
+
+
+
+
+\begin{ex}
+  Using the standard basis for $L = \sl(2,F)$, write down the Casimir element of the adjoint representation of $L$ (cf. Exercise \ref{5.5}). Do the same thing for the usual ($3-$dimensional) representation of $\sl(3,F)$, first computing dual bases relative to the trace form.
+\end{ex}
+\begin{proof}
+  For the adjoint representation of $L = \sl(2,F)$, The matrix of $\beta$ respect to basis $(x,h,y)$ is
+  \begin{equation*}
+    \begin{pmatrix}
+      0 & 0 & 4 \\
+      0 & 8 & 0 \\
+      4 & 0 & 0 \\
+    \end{pmatrix}
+  \end{equation*}
+
+  we can deduce the dual basis of $(x, h, y)$ is $(\frac{1}{4}y, \frac{1}{8}h, \frac{1}{4}x)$. So the Casimir element of this representation is
+  \begin{equation*}
+    c_{\ad} = \frac{1}{4}\ad x\ad y + \frac{1}{8}\ad h\ad h + \frac{1}{4}\ad y\ad x
+  \end{equation*}
+
+  For the usual representation of $L = \sl(3,F)$, The matrix of $\beta$ respect to basis
+  \begin{equation*}
+    \{e_{11} - e_{22}, e_{22} - e_{33}, e_{12}, e_{13}, e_{21}, e_{23}, e_{31}, e_{33}\}
+  \end{equation*}
+  is
+  \begin{equation*}
+    \begin{pmatrix}
+      2 & -1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+      -1 & 2 & 0 & 0 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+      0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+      0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+    \end{pmatrix}
+  \end{equation*}
+
+  We can deduce the dual basis is
+  \begin{equation*}
+    \frac{2}{3}e_{11} - \frac{1}{3}e_{22} - \frac{1}{3}e_{33}, \frac{1}{3}e_{11} + \frac{1}{3}e_{22} - \frac{2}{3}e_{33}, e_{21}, e_{31}, e_{32}, e_{12}, e_{13}, e_{23}
+  \end{equation*}
+
+  So
+  \begin{equation*}
+    c_{\varphi} = \sum_x xx' = \begin{pmatrix}
+                               \frac{8}{3} & 0 & 0 \\
+                               0 & \frac{8}{3} & 0 \\
+                               0 & 0 & \frac{8}{3} \\
+                             \end{pmatrix}
+  \end{equation*}
+\end{proof}
+
+\begin{ex}
+  Let $V$ be an $L-$module. Prove that $V$ is a direct sum of irreducible submodules if and only if each $L-$submodule of $V$ possesses a complement.
+\end{ex}
+\begin{proof}
+  If each $L-$submodule of $V$ possesses a complement, then we can write $V$ as a direct sum of irreducible submodules by induction on $\dim V$.
+
+  Conversely, suppose that $V$ is a direct sum of irreducible submodules $V_1\oplus\cdots\oplus V_r$, and let $W$ be a proper $L-$submodule of $V$ . The map $V \to V/W$ is surjective, and hence there is some $i$ such that $V_i \to V/W$ is a nonzero map. Since $V_i$ is irreducible, it must be injective, which means that $V_i \cap W = 0$. By induction on codimension, $V_i +W$ has a direct sum complement $W''$. Set $W' = W'' + V_i$. Then $W \cap (V_i +W'') = 0$ and $V = W \oplus W'$.
+\end{proof}
+
+\begin{ex}
+  If $L$ is solvable, every irreducible representation of $L$ is one dimensional.
+\end{ex}
+\begin{proof}
+  Let $V$ be a representation of $L$. By Lie's theorem, there is a basis for $V$ such that $L$ acts by upper triangular matrices. Then the subspace of $V$ spanned by the first basis vector is invariant under $L$. Hence if $V$ is irreducible, it must be $1-$dimensional.
+\end{proof}
+
+\begin{ex}
+  Use Weyl's Theorem to give another proof that for $L$ semisimple, $\ad L = \Der L$ (Theorem \ref{5.3}). [If $\delta \in \Der L$, make the direct sum $F+L$ into an $L-$module via the rule $x.(a,y) = (0, a\delta(x)+[xy])$. Then consider a complement to the submodule $L$.]
+\end{ex}
+\begin{proof}
+  Clearly, $L$ is a submodule of $F + L$. By Weyl's Theorem, it has a complement of dimension $1$. Let $(a_0, x_0), a_0 \neq 0$ be its basis. Then $L$ acts on it trivially. Hence
+  \begin{equation*}
+    0 = x.(a_0, x_0) = (0, a_0\delta(x) + [x, x_0])
+  \end{equation*}
+  i.e.
+  \begin{equation*}
+    \delta(x) = [\frac{1}{a_0}x_0, x] = \ad\frac{1}{a_0}x_0(x)
+  \end{equation*}
+
+  So $\delta \in \Int L$.
+\end{proof}
+
+\begin{ex}\label{6.5}
+  A Lie algebra $L$ for which $\Rad L = Z(L)$ is called \termin{reductive}. (Examples: $L$ abelian, $L$ semisimple, $L = \gl(n,F)$.)
+  \begin{enumerate}
+    \item If $L$ is reductive, then $L$ is a completely reducible $\ad L-$module. [If $\ad L \neq 0$, use Weyl's Theorem.] In particular, $L$ is the direct sum of $Z(L)$ and $[LL]$, with $[LL]$ semisimple.
+    \item If $L$ is a classical linear Lie algebra, then $L$ is semisimple. [Cf. Exercise \ref{1.9}.]
+    \item If $L$ is a completely reducible $\ad L-$module, then $L$ is reductive.
+    \item If $L$ is reductive, then all finite dimensional representations of $L$ in which $Z(L)$ is represented by semisimple endomorphisms are completely reducible.
+  \end{enumerate}
+\end{ex}
+\begin{proof}
+  \begin{enumerate}
+    \item Let $L$ be reductive. If $L$ is abelian, then it is clearly completely reducible as an $\ad L-$module ($\ad L = 0$). So assume $\ad L \neq 0$. Since $\ad L \cong L/Z(L) = L/\Rad L$, we see that $\ad L$ is semisimple. So by Weyl's theorem, $L$ is a completely reducible $\ad L-$module.
+
+        $L/Z(L)$ is semisimple, so $[LL]/Z(L) \cong [L/Z(L),L/Z(L)] \cong L/Z(L)$, hence
+        \begin{equation*}
+          L = Z(L) + [LL]
+        \end{equation*}
+
+        On the other hand, $Z(L)$ is a $\ad L-$submodule of $L$ and $L$ is a completely reducible $\ad L-$module. So $Z(L)$ has a component $M$ in $L$.
+        \begin{equation*}
+          L=M\oplus Z(L)
+        \end{equation*}
+        where $M$ is a ideal of $L$.
+        \begin{equation*}
+          [LL] \subset [M \oplus Z(L),M \oplus Z(L)] \subset [M,M] \subset M
+        \end{equation*}
+
+        We conclude that
+        \begin{equation*}
+          L =[LL]\oplus Z(L)
+        \end{equation*}
+        Hence $[LL] \cong L/Z(L)$ is semisimple.
+    \item If $L$ is a classical linear Lie algebra, by Exercise \ref{4.1}, $\Rad L = Z(L)$. And by Exercise \ref{1.9}, $Z(L) = 0$, so $L = [LL]$ is semisimple.
+    \item $L$ is a completely reducible $\ad L-$module. Clearly $Z(L)$ is a submodule. So
+        \begin{equation*}
+          L = Z(L) \oplus M
+        \end{equation*}
+        where $M$ is a direct sum of some simple ideal of $L$. So $M$ is semisimple. $L/Z(L) \cong M$ is semisimple. Hence $0=\Rad(L/Z(L)) = \Rad L/Z(L)$. Hence $\Rad L \subset Z(L)$.
+
+        On the other hand, $Z(L) \subset \Rad L$ is clearly.
+        We conclude that $\Rad L = Z(L)$, $L$ is reductive.
+    \item let $L$ be reductive and let $\varphi\colon L \to \gl(V )$ be a finite-dimensional representation of $L$ in which $Z(L)$ is represented by semisimple endomorphisms. Since $Z(L)$ is abelian, we may simultaneously diagonalize the elements of $\varphi(Z(L))$ to get an eigenspace decomposition of $V$ . Since $[L,L]$ commutes with $Z(L)$, each eigenspace is invariant under $[L,L]$. On each such eigenspace $W$, each element of $\varphi(Z(L))$ acts as a scalar, so $L-$submodules of $W$ coincide with $[L,L]-$submodules of $W$. We conclude complete reducibility from Weyl's theorem for semisimple Lie algebras.
+  \end{enumerate}
+\end{proof}
+
+\begin{ex}\label{6.6}
+  Let $L$ be a simple Lie algebra. Let $\beta(x, y)$ and $\gamma(x, y)$ be two symmetric associative bilinear forms on $L$.
+  If $\beta,\gamma$ are nondegenerate, prove that $\beta$ and $\gamma$ are proportional. [Use Schur's Lemma.]
+\end{ex}
+\begin{proof}
+  $L$ is a irreducible $L-$module by $\ad$, and $L^{\ast}$ is a $L-$module, We can define a linear map $\phi\colon L \to L^{\ast}; x \mapsto \beta_x$, where $\beta_x \in L^{\ast}$ defined by $\beta_x(y) = \beta(x,y)$. Then it is easy to check that $\phi$ is a module homomorphism of $L-$module.
+
+  Similarly, we can define a linear map $\psi\colon L^{\ast} \to L; f \to x_f$ , where $x_f$ defined by $f(z) = \gamma(x_f,z)$ for all $z \in L$. This $x_f$ exists because $\gamma$ is non-degenerate. Then $\psi$ is also a homomorphism of $L-$modules.
+
+  So $\psi\circ\phi$ is a homomorphism from $L$ to $L$, i.e, $\psi\circ\phi$ is a endomorphism of $L$ which commutative with all $\ad x, x\in L$, and $L$ is a irreducible $L-$module. By Schur's lemma we have
+  \begin{equation*}
+    \psi\circ\phi=\lambda\id
+  \end{equation*}
+
+  So
+  \begin{equation*}
+    \beta(x,y)=\beta_x(y)=\gamma(x_{\beta_x},y)=\gamma(\psi\circ\phi(x),y)=\gamma(\lambda x,y)=\lambda\gamma(x,y)\quad \forall x,y\in L
+  \end{equation*}
+\end{proof}
+
+\begin{ex}
+  It will be seen later on that $\sl(n, F)$ is actually simple. Assuming this and using Exercise \ref{6.6}, prove that the Killing form $\kappa$ on $\sl(n,F)$ is related to the ordinary trace form by $\kappa(x,y) = 2n\Tr(xy)$.
+\end{ex}
+\begin{proof}
+  Clearly $\Tr(xy)$ is a nonzero symmetric associative bilinear form on $\sl(n,F)$, its radical is a ideal of $\sl(n,F)$, hence is equal to $0$, and $\Tr(xy)$ is nondegenerate. By Exercise \ref{6.6}, $\kappa(x,y) = \lambda\Tr(xy)$.
+
+  We can only compute it for $x = y = e_{11} - e_{22}$. In this case, $\Tr(xy) = 2$. The matrix of $\ad(e_{11} - e_{22})$ relative to the standard basis of $\sl(n, F)$ is a diagonal matrix
+  \begin{equation*}
+    \diag(\underbrace{0,\cdots,0}_{n-1},2,-2,\underbrace{1,\cdots,1}_{2n-4},\underbrace{-1,\cdots,-1}_{2n-4},0,\cdots,0)
+  \end{equation*}
+
+  Hence $\kappa(x, y) = \Tr(\ad x\ad y) = 4 + 4 + 2(2n - 4) = 4n = 2n\Tr(xy)$.
+\end{proof}
+
+\begin{ex}
+  If $L$ is a Lie algebra, then $L$ acts (via $\ad$) on $(L\otimes L)^{\ast}$, which may be identified with the space of all bilinear forms $\beta$ on $L$. Prove that $\beta$ is associative if and only if $L.\beta = 0$.
+\end{ex}
+\begin{proof}
+  By definition,
+  \begin{align*}
+    z.\beta(x\otimes y) &= -\beta(z.(x\otimes y)) \\
+     &= -\beta(z.x\otimes y+x\otimes z.y) \\
+     &= \beta([x,z]\otimes y)-\beta(x\otimes[z,y])
+  \end{align*}
+
+  Hence
+  \begin{equation*}
+    L.\beta=0 \iff \beta([x,z]\otimes y)=\beta(x\otimes[z,y]), \forall x,y,z\in L
+  \end{equation*}
+  which means $\beta$ is associative.
+\end{proof}
+
+\begin{ex}\label{6.9}
+  Let $L'$ be a semisimple subalgebra of a semisimple Lie algebra $L$. If $x \in L'$, its Jordan decomposition in $L'$ is also its Jordan decomposition in $L$.
+\end{ex}
+\begin{proof}
+  This follows from the corollary to Theorem 6.4 by using the adjoint representation of $L$ and noting that it is injective.
+\end{proof}
+
+\section{Representations of $\sl(2,F)$}
+\textbf{In these exercises, $L = \sl(2,F)$.}
+
+
+
+\begin{ex}
+  Use Lie's Theorem to prove the existence of a maximal vector in an arbitrary finite dimensional $L-$module. [Look at the subalgebra $B$ spanned by $h$ and $x$.]
+\end{ex}
+\begin{proof}
+  $\phi\colon L \to \gl(V)$ is a representation. Let $B$ be the subalgebra of $L$ spanned by $h$ and $x$. Then $\phi(B)$ is a solvable subalgebra of $\gl(V)$. And $\phi(x)$ is a nilpotent endomorphism of $V$. By Lie's theorem, there is a common eigenvector $v$ for $B$. So $h.v = \lambda v, x.v = 0$, $v$ is a maximal vector.
+\end{proof}
+
+\begin{ex}
+  $M = \sl(3,F)$ contains a copy of $L$ in its upper left-hand $2 \times 2$ position. Write $M$ as direct sum of irreducible $L-$submodules ($M$ viewed as $L-$module via the adjoint representation): $V(0)\oplus V(1) \oplus V(1) \oplus V(2)$.
+\end{ex}
+\begin{proof}
+  Let $h = e_{11} - e_{22}, x = e_{12}, y = e_{21}$.
+
+  First, we know $\ad h.e_{12} = 2e_{12}, \ad x.e_{12} = 0$. So $e_{12}$ is a maximal vector with highest weight $2$. It can generate a irreducible module isomorphic to $V(2)$.
+  Let
+  \begin{equation*}
+    v_0 = e_{12}, v_1 = [e_{21}, e_{12}] = -(e_{11} - e_{22}), v_2 = [e_{21},-(e_{11} - e_{22})] = -e_{21}.
+  \end{equation*}
+  So $V(2) \cong \Span\{e_{12}, e_{11} - e_{22}, e_{21}\}$.
+
+  $\ad h.e_{13} = e_{13}, \ad x.e_{13} = 0$. So $e_{13}$ is a maximal vector with weight $1$. It can generate a irreducible module isomorphic to $V(1)$.
+  \begin{equation*}
+    [e_{21}, e_{13}] = e_{23}.
+  \end{equation*}
+  We have $V(1) \cong \Span\{e_{13}, e_{23}\}$.
+
+  $\ad h.e_{32} = e_{32}, \ad x.e_{32} = 0$. So $e_{32}$ is a maximal vector with weight $1$. It can generate a irreducible module isomorphic to $V(1)$.
+  \begin{equation*}
+    [e_{21}, e_{32}] = -e_{31}.
+  \end{equation*}
+  We have another $V(1) \cong \Span\{e_{31}, e_{32}\}$.
+
+  At last, we have a $1-$dimensional irreducible submodule of $V(0) \cong span\{e_{22} - e_{33}\}$.
+
+  Then
+
+  \begin{equation*}
+    M\cong V(0)\oplus V(1) \oplus V(1) \oplus V(2)
+, \end{equation*}
+\end{proof}
+
+\begin{ex}\label{7.3}
+  Verify that formulas (a)-(c) of Lemma 7.2 do define an irreducible representation of $L$. [Hint: To show that they define a representation, it suffices to show that the matrices corresponding to $x, y, h$ satisfy the same structural equations as $x, y, h$.]
+\end{ex}
+\begin{proof}
+  \begin{align*}
+    [h, x].v_i &= 2x.v_i = 2(\lambda - i + 1)v_{i-1} \\
+    h.x.v_i - x.h.v_i &= (\lambda - i + 1)h.v_{i-1} - (\lambda - 2i)x.v_i \\
+                           &= (\lambda - i + 1)(\lambda - 2i + 2)v_{i-1} - (\lambda - 2i)(\lambda - i + 1)v_{i-1} \\
+                           &= 2(\lambda - i + 1)v_{i-1} \\
+    [h, y].v_i &= -2y.v_i = -2(i + 1)v_{i+1} \\
+    h.y.v_i - y.h.v_i &= (i + 1)h.v_{i-1} - (\lambda - 2i)y.v_i \\
+                           &= (i + 1)(\lambda - 2i - 2)v_{i+1} - (\lambda - 2i)(i + 1)v_{i+1} \\
+                           &= -2(i + 1)v_{i+1} \\
+    [x, y].v_i &= hv_i = (\lambda - 2i)v_i \\
+    x.y.v_i - y.x.v_i &= (i + 1)x.v_{i+1} - (\lambda - i + 1)y.v_{i-1} \\
+                           &= (i + 1)(\lambda - i)v_i - (\lambda - i + 1)iv_i \\
+                           &= (\lambda - 2i)v_i
+  \end{align*}
+\end{proof}
+
+\begin{ex}\label{7.4}
+  The irreducible representation of $L$ of highest weight $m$ can also be realized ``naturally'', as follows. Let $X, Y$ be a basis for the two dimensional vector space $F^2$, on which $L$ acts as usual. Let $\Rrr = F[X, Y]$ be the polynomial algebra in two variables, and extend the action of $L$ to $R$ by the derivation rule: $z.fg = (z.f )g + f(z.g)$, for $z \in L, f, g \in \Rrr$. Show that this extension is well defined and that $\Rrr$ becomes an $L-$module. Then show that the subspace of homogeneous polynomials of degree $m$, with basis $X^m,X^{m-1}Y,\cdots ,XY^{m-1},Y^m$, is invariant under $L$ and irreducible of highest weight $m$.
+\end{ex}
+
+\begin{ex}
+  Suppose $\Char F = p > 0, L = \sl(2,F)$. Prove that the representation $V(m)$ of $L$ constructed as in Exercise \ref{7.3} or \ref{7.4} is irreducible so long as the highest weight $m$ is strictly less than $p$, but reducible when $m = p$.
+\end{ex}
+\begin{proof}
+  When $m < p$, conditions (a)-(c) of Lemma 7.2 still imply the irreducibility of $V(m)$. However, when $m = p$, the submodule spanned by $\{v_0,\cdots, v_{m-1}\}$ is invariant under $L$, so $V(m)$ is reducible.
+\end{proof}
+
+\begin{ex}
+  Decompose the tensor product of the two $L-$modules $V(3), V(7)$ into the sum of irreducible submodules: $V(4)\oplus V(6) \oplus V(8) \oplus V(10)$. Try to develop a general formula for the decomposition of $V(m)\otimes V(n)$.
+\end{ex}
+\begin{proof}
+  In general, for $V = V(m)\otimes V(n)$. We suppose $m \geqslant n$. $u_i, i = 0, \cdots ,m$ is the basis of $V(m)$ and $v_j , j = 1, \cdots, n$ is the basis of $V(n)$.
+  \begin{equation*}
+    h.(u_i\otimes v_j) = (m + n - 2(i + j))u_i\otimes v_j
+  \end{equation*}
+
+  Hence
+  \begin{equation*}
+    V_{m+n-2k} = \Span\{u_i\otimes v_j, i+j=k\}
+  \end{equation*}
+
+  For $k = 0,\cdots,m$, suppose $w = \sum\limits_{i=0}^k \lambda_iu_i\otimes v_{k-i} \in V_{m+n-2k}$ is a maximal vector. Then
+  \begin{align*}
+    x.w &= \sum_{i=0}^k \lambda_i((x.u_i)\otimes v_{k-i} + u_i\otimes (x.v_{k-i})) \\
+           &= \sum_{i=1}^k \lambda_i(m - i + 1)u_{i-1}\otimes v_{k-i} + \sum_{i=0}^{k-1} \lambda_i(n - k + i + 1)u_i\otimes v_{k-i-1} \\
+           &= \sum_{i=1}^k (\lambda_i(m - i + 1) + \lambda_{i-1}(n - k + i))u_{i-1}\otimes v_{k-i} \\
+           &= 0
+  \end{align*}
+
+  Therefore
+  \begin{equation*}
+    \lambda_i(m - i + 1) + \lambda_{i-1}(n - k + i) = 0
+  \end{equation*}
+
+  We conclude that
+  \begin{equation*}
+    \lambda_i = (-1)^i \frac{(n-k+i)!(m-i)!}{(n-k)!m!} \lambda_0
+  \end{equation*}
+
+  Let $\lambda_0 = 1$, then $w = \sum\limits_{i=0}^k \lambda_iu_i\otimes v_{k-i}$ is a maximal vector with weight $m+n-2k$. It generates a irreducible submodule of V isomorphic to $V(m + n - 2k)$. So
+  \begin{equation*}
+    \bigoplus_{k=0}^n V(m + n - 2k) \subset V(m)\otimes V(n).
+  \end{equation*}
+
+  Compare the dimensional of two sides, we have the decomposition $V(m)\otimes V(n) \cong V(m-n)\oplus V(m-n+2)\oplus\cdots\oplus V(m+n)$.
+\end{proof}
+\begin{proof}
+  To find a decomposition of $V(m)\otimes V(n)$, it is enough to count the dimensions of eigenspaces of $h$. In particular, note that since $h.(v\otimes w) = h.v\otimes w+v\otimes h.w$, if $v \in V_{\lambda} \subset V(m)$ and $w \in V_{\mu} \subset V(n)$, then $v\otimes w \in V_{\lambda+\mu} \subset V(m)\otimes V(n)$.
+
+  Hence the dimension of $V_{\lambda}$ in $V(m)\otimes V(n)$ is the number of ways to write $\lambda$ as a sum of elements from the two sets $\{m,m-2,\cdots,-m\}$ and $\{n, n-2,\cdots,-n\}$. Without loss of generality, assume that $m \geqslant n$. Then $\lambda$ can be written as such a sum $\min(\frac{m+n-|\lambda|}{2} + 1, \frac{m+n-(m-n)}{2} + 1)$ ways if $m+ n - |\lambda|$ is even and $0$ ways otherwise.
+
+  Hence we have the decomposition $V(m)\otimes V(n) \cong V(m-n)\oplus V(m-n+2)\oplus\cdots\oplus V(m+n)$.
+\end{proof}
+
+\begin{ex}
+  In this exercise we construct certain infinite dimensional $L-$modules. Let $\lambda\in F$ be an arbitrary scalar. Let $Z(\lambda)$ be a vector space over $F$ with countably infinite basis $(v_0, v_1, v_2, \cdots )$.
+  \begin{enumerate}
+    \item Prove that formulas (a)-(c) of Lemma 7.2 define an $L-$module structure on $Z(\lambda)$, and that every nonzero $L-$submodule of $Z(\lambda)$ contains at least one maximal vector.
+    \item Suppose $\lambda + 1 = i$ is a nonnegative integer. Prove that $v_i$ is a maximal vector (e.g., $\lambda = -1, i = 0$). This induces an $L-$module homomorphism $Z(\mu)\markar{\phi}Z(\lambda), \mu = \lambda - 2i$, sending $v_0$ to $v_i$. Show that $\phi$ is a monomorphism, and that $\im\phi, Z(\lambda)/\im\phi$ are both irreducible $L-$modules (but $Z(\lambda)$ fails to be completely reducible when $i > 0$).
+    \item Suppose $\lambda + 1$ is not a nonnegative integer. Prove that $Z(\lambda)$ is irreducible.
+  \end{enumerate}
+\end{ex}
+\begin{proof}
+  \begin{enumerate}
+    \item We need to verify that $[xy]=h, [hx]=2x, [hy]=-2y$ as linear transformations on $Z(\lambda)$.
+
+    It suffices to check these on the basis $(v_0,v_1,v_2,\cdots)$. Given $v_i$, we have
+    \begin{align*}
+      [xy].v_i & = (i+1)x.v_{i+1}-(\lambda-i+1)y.v_{i-1} \\
+                   & = (i+1)(\lambda-i)v_i -(\lambda-i+1)iv_i \\
+                   & = (\lambda-2i)v_i = h.v_i; \\
+      [hx].v_i & = (\lambda-i+1)h.v_{i-1}-(\lambda-2i)x.v_i \\
+                   & = (\lambda-i+1)(\lambda-2i+2)v_{i-1} -(\lambda-2i)(\lambda-i+1)v_{i-1} \\
+                   & = 2(\lambda-i+1)v_{i-1} = 2x.v_i; \\
+      [hy].v_i & = (i+1)h.v_{i+1}-(\lambda-2i)y.v_i \\
+                   & = (i+1)(\lambda-2i-2)v_{i+1} -(\lambda-2i)(i+1)v_{i+1} \\
+                   & = -2(i+1)v_{i+1} = -2y.v_i;
+    \end{align*}
+
+    So $Z(\lambda)$ is an $L-$module.
+
+    Let $U$ be an arbitrary nonzero $L-$submodule of $Z(\lambda)$. For any nonzero $v\in U$ write $v$ as a linear combination of basis: $v=\sum\limits_{i\in I}a_iv_i$, where all $a_i\neq0$. We have
+    \begin{equation*}
+      h.v=\sum_{i\in I} a_i(\lambda-2i)v_i \in U
+    \end{equation*}
+
+    This implies all $v_i\in U$. So
+    \begin{equation*}
+      U=\Span\{v_j,j\in J\}
+    \end{equation*}
+
+    Let $k = \min J$, then $v_k \in U$, and $v_{k-1} \not\in U$, so $x.v_k = (\lambda - k + 1)v_{k-1} = 0$. We conclude that $v_k$ is a maximal vector in $U$.
+    \item $x.v_i=(\lambda-i+1)v_{i-1}=0$, hence $v_i$ is a maximal vector.
+
+    To see $\phi$ is a monomorphism, it suffices to show it is injective on basis. In deed,
+    \begin{equation*}
+      \phi(v_k)=\binom{k+i}{i}v_{k+i}
+    \end{equation*}
+
+    We prove this by induction on $k$
+
+    When $k=0$, $\phi(v_0)=v_i$.
+    If we already have $\phi(v_{k-1})=\binom{k-1+i}{i}v_{k-1+i}$, then
+    \begin{align*}
+      \phi(v_k) & = \phi(\frac{1}{k}y.v_{k-1}) = \frac{1}{k} y.\phi(v_{k-1}) \\
+       & = \frac{1}{k}\binom{k-1+i}{i} y.v_{k-1+i} = \frac{k+i}{k}\binom{k-1+i}{i}v_{k+i} \\
+       & = \binom{k+i}{i}v_{k+i}
+    \end{align*}
+
+    $\im\phi\cong= Z(\mu)$ is a submodule of $Z(\lambda)$ and by (1) it has a maximal vector of form $v_s$. But
+    \begin{equation*}
+      x.v_s = (\mu-s+1) = -(i + s)v_{s-1} = 0
+    \end{equation*}
+    From $i + s > 0$, we have $v_{s-1} = 0$. So $v_0$ is the unique maximal vector in $Z(\mu)$ and $Z(\mu)$ is irreducible. $Z(\lambda)/\im\phi\cong V(i-1)$ is a irreducible module.
+
+    Next we show $Z(\lambda)$ is not completely reducible. If $Z(\lambda)$ is completely reducible, then we have an $L-$module decomposition $Z(\lambda)=\im\phi\oplus V$. Then there exists a $w\in\im\phi$ such that $v_0+w\in V$. But
+    \begin{equation*}
+      y^i.(v_0+w)=v_i+y^i.w\in\im\phi
+    \end{equation*}
+    which contradicts with the fact that $V$ is an $L-$module.
+    \item If $Z(\lambda)$ reducible, it has a proper nonzero submodule $U$. By (1) $U$ has a maximal vector $v_k$ with $k > 0$.
+        \begin{equation*}
+          x.v_k = (\lambda- k + 1)v_{k-1} = 0
+        \end{equation*}
+
+        Hence $\lambda + 1 = k$ is a positive integer. We get a contradiction.
+  \end{enumerate}
+\end{proof}
+
+\section{Root space decomposition}
+
+
+
+
+\begin{ex}\label{8.1}
+  If $L$ is a classical linear Lie algebra of type $A_l,B_l,C_l$ or $D_l$, prove that the set of all diagonal matrices in $L$ is a maximal toral subalgebra, of dimension $l$ (Cf. Exercise \ref{2.8}.)
+\end{ex}
+\begin{proof}
+  Since a toral subalgebra is abelian, any toral subalgebra containing the set of diagonal matrices in $L$ must contain only diagonal matrices because commuting semisimple matrices are simultaneously diagonalizable. Its dimension can be immediately verified in the four cases to be $l$.
+\end{proof}
+
+\begin{ex}\label{8.2}
+  For each algebra in Exercise \ref{8.1}, determine the roots and root spaces. How are the various $h_{\alpha}$ expressed in terms of the basis for $H$ given in section 1?
+\end{ex}
+
+\begin{ex}
+  If $L$ is of classical type, compute explicitly the restriction of the Killing form to the maximal toral subalgebra described in Exercise \ref{8.1}.
+\end{ex}
+
+\begin{ex}
+  If $L = \sl(2,F)$, prove that each maximal toral subalgebra is one dimensional.
+\end{ex}
+\begin{proof}
+  $\hh$ is a maximal toral subalgebra of $L$, $L = \hh \oplus\sum\limits_{\alpha\in\Phi} L_{\alpha}, \dim L_{\alpha} = 1. \alpha\in\Phi$ then $-\alpha\in\Phi$. This implies $\Card(\Phi)$ is even and nonzero. So $\dim \hh = 1$.
+\end{proof}
+
+\begin{ex}
+  If $L$ is semisimple, $H$ a maximal toral subalgebra, prove that $H$ is self-normalizing (i.e., $H = N_L(H)$).
+\end{ex}
+\begin{proof}
+  $L = H \oplus\sum\limits_{\alpha\in\Phi} L_{\alpha}$. For $x\in N_L(H)$, $x= h_0+\sum\limits_{\alpha\in\Phi} x_{\alpha}, x_{\alpha}\in L_{\alpha}$. Choose $h \in H$ such that $\alpha(h) \neq 0, \forall\alpha\in\Phi$, then
+  \begin{equation*}
+    [h, x] = \sum_{\alpha\in\Phi} \alpha(h)x_{\alpha} \in H
+  \end{equation*}
+
+  Hence $x_{\alpha} = 0, \forall \alpha\in\Phi$. $x = h_0 \in H$. i.e, $N_L(H) = H$.
+\end{proof}
+
+\begin{ex}
+  Compute the basis of $\sl(n,F)$ which is dual (via the Killing form) to the standard basis. (Cf. Exercise \ref{5.5}.)
+\end{ex}
+\begin{proof}
+  The dual of $e_{ij}(i\neq j)$ via the Killing form is $e_{ji}$, the dual of $h_i$ via the Killing form is $e_{ii}-\frac{1}{n}I_n$
+\end{proof}
+
+\begin{ex}\label{8.7}
+  Let $L$ be semisimple, $H$ a maximal toral subalgebra. If $h \in H$, prove that $C_L(h)$ is reductive (in the sense of Exercise \ref{6.5}). Prove that $H$ contains elements $h$ for which $C_L(h) = H$; for which $h$ in $\sl(n,F)$ is this true ?
+\end{ex}
+\begin{proof}
+  $L$ is semisimple. We have a decomposition $L = H \oplus\sum\limits_{\alpha\in\Phi} L_{\alpha}$
+  \begin{align*}
+    &\ x= h_0+ \sum_{\alpha\in\Phi} x_{\alpha} \in C_L(h) \\
+    \iff&\ [h,x] = \sum_{\alpha\in\Phi} \alpha(h)x_{\alpha} = 0 \\
+    \iff&\ \alpha(h) = 0 \quad\text{or}\quad x_{\alpha} = 0
+  \end{align*}
+
+  Hence
+  \begin{equation*}
+    C_L(h) = H \oplus\sum_{\substack{\alpha\in\Phi\\ \alpha(h)=0}} L_{\alpha}
+  \end{equation*}
+
+  Denote $\Phi_h = \{\alpha\in\Phi\mid\alpha(h)=0\}$. Now we claim that
+  \begin{equation*}
+    Z(C_L(h)) = \{h'\in H\mid \alpha(h') = 0, \forall\alpha\in\Phi_h\}
+  \end{equation*}
+
+  Let $x= h_0+ \sum\limits_{\alpha\in\Phi_h} x_{\alpha} \in Z(C_L(h))$. We can find a $h'\in H$ such that $\alpha(h') \neq 0, \forall\alpha\in\Phi_h$. Then $[h',x] = \sum\limits_{\alpha\in\Phi_h} \alpha(h')x_{\alpha} = 0$. It implies $x_{\alpha} = 0$. We have $x = h_0 \in H$. Next we take $0 \neq x_{\alpha} \in L_{\alpha}, \forall \alpha\in\Phi_h$, then $[x,x_{\alpha}] = \alpha(h_0)x_{\alpha} = 0$. Hence $\alpha(x) = \alpha(h_0) = 0, \forall\alpha\in\Phi_h$.
+
+  Next we show $Z(C_L(h)) = \Rad(C_L(h))$. Clearly $Z(C_L(h))$ is a solvable ideal of $C_L(h)$, it is enough to show it is a maximal solvable ideal.
+
+  If $x= h_0+ \sum\limits_{\alpha\in\Phi_h} x_{\alpha} \in \Rad(C_L(h))\setminus Z(C_L(h))$. We have a $h'\in H$ such that $\alpha(h') \neq 0$ and $\alpha(h') \neq \beta(h'), \forall \alpha\neq\beta\in\Phi_h$. Then $[h',x] = \sum\limits_{\alpha\in\Phi_h} \alpha(h')x_{\alpha} \in\Rad(C_L(h))$. Hence $h_0, x_{\alpha}\in \Rad(C_L(h)), \alpha\in\Phi_h$. If there is a $\alpha\in\Phi_h$ such that $x_{\alpha}\neq 0$, then $h_{\alpha} = [x_{\alpha},y_{\alpha}] \in \Rad(C_L(h)), 2y_{\alpha} = -[h_{\alpha}, y_{\alpha}] \in\Rad(C_L(h))$. Hence $\sl(2,F) \cong S_{\alpha}\subset \Rad(C_L(h))$ which contradict with the solvability of $\Rad(C_L(h))$.
+
+  Now we get $x = h_0 \in \Rad(C_L(h))\setminus Z(C_L(h))$. So there is a $\alpha\in\Phi_h$ such that $\alpha(h_0) \neq 0$. Then $[x,x_{\alpha}] = \alpha(h_0)x_{\alpha} \in\Rad(C_L(h)), [x, y_{\alpha}] = -\alpha(h_0)y_{\alpha}\in \Rad(C_L(h))$. We also have $S_{\alpha}\subset \Rad(C_L(h))$ which contradict with the solvability of $\Rad(C_L(h))$.
+
+  All of the above show that $Z(C_L(h)) = \Rad(C_L(h))$. i.e., $C_L(h)$ is reductive. We know there is a $h \in H, \alpha(h) \neq 0, \forall\alpha\in\Phi$. In this case, $C_L(h) = H$.
+
+  In $\sl(n,F)$, for $e_{ij}(i\neq j)\in L_{\alpha}$ and $h=\sum a_kh_k\in H$, we have
+  \begin{equation*}
+    [h,e_{ij}] = \alpha(h)e_{ij} =
+    \begin{cases}
+      (4a_i-a_{i+1}-a_{i-1})e_{i,i+1} & j=i+1\\
+      (a_{j+1}+a_{j-1}-4a_j)e_{j+1,j} & i=j+1 \\
+      (a_i-a_j-a_{i-1}+a_{j-1})e_{ij} & |i-j|>1
+    \end{cases}
+  \end{equation*}
+
+  Then these $h$ for which $C_L(h)=H$ is these satisfying
+  \begin{equation*}
+    \begin{cases}
+      4a_i-a_{i+1}-a_{i-1}\neq0 & 1\leqslant i\leqslant n\\
+      a_i-a_j-a_{i-1}+a_{j-1}\neq 0 & |i-j|>1
+    \end{cases}
+  \end{equation*}
+\end{proof}
+
+\begin{ex}
+  For $\sl(n,F)$ (and other classical algebras), calculate explicitly the root strings and Cartan integers. In particular, prove that all Cartan integers $2\frac{(\alpha,\beta)}{(\beta,\beta)},\alpha\neq\pm\beta$, for $\sl(n,F)$ are $0,\pm1$.
+\end{ex}
+
+\begin{ex}
+  Prove that every three dimensional semisimple Lie algebra has the same root system as $\sl(2,F)$, hence is isomorphic to $\sl(2,F)$.
+\end{ex}
+\begin{proof}
+  This is a direct consequence of Proposition 8.3(f).
+\end{proof}
+
+\begin{ex}
+  Prove that no four, five or seven dimensional semisimple Lie algebras exist.
+\end{ex}
+\begin{proof}
+  Let $L$ is a semisimple Lie algebra with a maximal toral subalgebra $H$.
+  We have $L = H \oplus\sum\limits_{\alpha\in\Phi} L_{\alpha}$.
+  Since $\alpha\in\Phi$ implies $-\alpha\in\Phi$, $\sum\limits_{\alpha\in\Phi} L_{\alpha}$ has dimensional $2k$ with $k > 1$. Therefore
+  \begin{equation*}
+    \dim H = \dim L - \dim(\sum\limits_{\alpha\in\Phi} L_{\alpha}) = \dim L - 2k
+  \end{equation*}
+
+  In the other hands, $\Phi = \{\pm\alpha_1,\cdots, \pm\alpha_k\}$ span $H^{\ast}$, then
+  \begin{equation*}
+    \dim H = \dim H^{\ast} \leqslant k
+  \end{equation*}
+
+  We conclude
+  \begin{equation*}
+    \frac{\dim L}{3}\leqslant k < \frac{\dim L}{2}
+  \end{equation*}
+
+  If $\dim L = 4$, we can not find a integer k satisfying it.
+
+  If $\dim L = 5, k = 2$. Then $\dim H = 1$, i.e, $\Phi$ spans a $1-$dimensional space. $\alpha_2 = m\alpha_1$ with $m = \pm1$. We get a contradiction.
+
+  If $\dim L = 7, k = 3$. Then $\dim H = 1$. We can deduce a contradiction as the case $\dim L = 5$. Hence, there is no four, five or seven dimensional semisimple Lie algebra.
+\end{proof}
+
+\begin{ex}
+  If $(\alpha,\beta) > 0$, and $\alpha\neq\pm\beta$, prove that $\alpha-\beta\in\Phi (\alpha,\beta\in\Phi)$. Is the converse true?
+\end{ex}
+\begin{proof}
+  We have $\beta-\frac{2(\alpha,\beta)}{(\beta,\beta)}\alpha\in\Phi$ since $\alpha,\beta\in\Phi$.
+
+  Let the $\beta$ string through $\alpha$ is $\alpha-r\beta,\cdots, \alpha,\cdots, \alpha+q\beta$. We have $r > 0$ since $(\alpha,\beta) > 0$. Hence $\alpha-\beta$ appeals in the string. It is a root.
+\end{proof}

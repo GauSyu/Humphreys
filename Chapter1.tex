@@ -1,0 +1,784 @@
+\part{Basic Concepts}
+\section{Definition and first examples}
+\begin{defn}
+  A \termin{Lie algebra} is a vector space with an skew-symmetric bilinear operation satisfying Jacobi identity.
+\end{defn}
+
+\begin{exam}[$A_l$]
+  Let $\dim V=l+1$, the set of endomorphisms of $V$ having trace $0$, usually denoted by $\sl(V)$ or $\sl(l+1,F)$, is called \termin{special linear algebra}.
+
+  $\dim A_l=(l+1)^2-1$, basis:
+  \begin{align*}
+    & h_i=e_{ii}-e_{i+1,i+1} \quad (1\leqslant i\leqslant l) \\
+    & e_{ij} \quad (i\neq j)
+  \end{align*}
+\end{exam}
+
+\begin{exam}[$C_l$]
+  Let $\dim V=2l$, $f$ be the symplectic form on $V$, the set of all endomorphisms $x$ of $V$ satisfying $f(x(v),w)=-f(v,x(w))$, usually denoted by $\sp(V)$ or $\sp(2l,F)$, is called the \termin{symplectic algebra}.
+
+  \begin{align*}
+    \sp(2l,F)&=\{x\in \gl(2l,F)\mid sx=-x^ts \}\qquad s=\begin{pmatrix}
+                                                               \begin{smallmatrix}
+                                                               0 & I_l \\
+                                                               -I_l & 0 \\
+                                                               \end{smallmatrix}
+                                                             \end{pmatrix}
+                                                             \\
+    &=\left\{ \begin{pmatrix}
+           \begin{smallmatrix}
+           A & B \\
+           C & -A^t \\
+           \end{smallmatrix}
+         \end{pmatrix}
+         \mid A,B,C\in \gl(l,F), B=B^t,C=C^t
+     \right\}
+  \end{align*}
+
+  $\dim C_l=2l^2+l$, basis:
+  \begin{align*}
+    & e_{ij}-e_{l+j,l+i} \quad (1\leqslant i,j\leqslant l) \\
+    & e_{i,l+j}+e_{j,l+i} \quad (1\leqslant i<j\leqslant l) \\
+    & e_{l+i,j}+e_{l+j,i} \quad (1\leqslant i<j\leqslant l) \\
+    & e_{i,l+i} \quad (1\leqslant i\leqslant l) \\
+    & e_{l+i,i} \quad (1\leqslant i\leqslant l)
+  \end{align*}
+\end{exam}
+
+\begin{exam}[$B_l$]
+  Let $\dim V=2l+1$, $f$ be the symmetric bilinear form on $V$ whose matrix is $s=\begin{pmatrix}
+                                                                                    \begin{smallmatrix}
+                                                                                    1 & 0 & 0 \\
+                                                                                    0 & 0 & I_l \\
+                                                                                    0 & I_l & 0 \\
+                                                                                    \end{smallmatrix}
+                                                                                  \end{pmatrix}
+  $, the set of all endomorphisms $x$ of $V$ satisfying $f(x(v),w)=-f(v,x(w))$, usually denoted by $\oo(V)$ or $\oo(2l+1,F)$, is called the \termin{orthogonal algebra}.
+
+  \begin{align*}
+    \oo(2l+1,F)&=\{x\in \gl(2l+1,F)\mid sx=-x^ts \}\qquad s=\begin{pmatrix}
+                                                                                    \begin{smallmatrix}
+                                                                                    1 & 0 & 0 \\
+                                                                                    0 & 0 & I_l \\
+                                                                                    0 & I_l & 0 \\
+                                                                                    \end{smallmatrix}
+                                                                                  \end{pmatrix}
+                                                             \\
+    &=\left\{ \begin{pmatrix}
+           \begin{smallmatrix}
+           0 & b & c \\
+           -c^t & m &p \\
+           -b^t & q & -m^t \\
+           \end{smallmatrix}
+         \end{pmatrix}
+         \mid p=-p^t,q=-q^t
+     \right\}
+  \end{align*}
+
+  $\dim B_l=2l^2+l$, basis:
+  \begin{align*}
+    & e_{1+i,1+j}-e_{1+l+j,1+l+i} \quad (1\leqslant i,j\leqslant l) \\
+    & e_{1+i,1+l+j}-e_{1+j,1+l+i} \quad (1\leqslant i<j\leqslant l) \\
+    & e_{1+l+i,1+j}-e_{1+l+j,1+i} \quad (1\leqslant i<j\leqslant l) \\
+    & e_{1,1+i}-e_{1+l+i,1} \quad (1\leqslant i\leqslant l) \\
+    & e_{1,1+l+i}-e_{1+i,1} \quad (1\leqslant i\leqslant l)
+  \end{align*}
+\end{exam}
+
+\begin{exam}[$D_l$]
+  Let $\dim V=2l$, $f$ be the symmetric bilinear form on $V$ whose matrix is $s=\begin{pmatrix}
+                                                                                    \begin{smallmatrix}
+                                                                                    0 & I_l \\
+                                                                                    I_l & 0 \\
+                                                                                    \end{smallmatrix}
+                                                                                  \end{pmatrix}
+  $, the set of all endomorphisms $x$ of $V$ satisfying $f(x(v),w)=-f(v,x(w))$, usually denoted by $\oo(V)$ or $\oo(2l,F)$, is also called the \termin{orthogonal algebra}.
+
+  \begin{align*}
+    \oo(2l,F)&=\{x\in \gl(2l,F)\mid sx=-x^ts \}\qquad s=\begin{pmatrix}
+                                                                                    \begin{smallmatrix}
+                                                                                    0 & I_l \\
+                                                                                    I_l & 0 \\
+                                                                                    \end{smallmatrix}
+                                                                                  \end{pmatrix}
+                                                             \\
+    &=\left\{ \begin{pmatrix}
+           \begin{smallmatrix}
+           A & B \\
+           C & -A^t \\
+           \end{smallmatrix}
+         \end{pmatrix}
+         \mid A,B,C\in \gl(l,F), B=-B^t,C=-C^t
+     \right\}
+  \end{align*}
+
+  $\dim D_l=2l^2-l$, basis:
+  \begin{align*}
+    & e_{ij}-e_{l+j,l+i} \quad (1\leqslant i,j\leqslant l) \\
+    & e_{i,l+j}-e_{j,l+i} \quad (1\leqslant i<j\leqslant l) \\
+    & e_{l+i,j}-e_{l+j,i} \quad (1\leqslant i<j\leqslant l)
+  \end{align*}
+\end{exam}
+\begin{rem}
+  The Lie algebra corresponding to Lie groups $\GO(n,F)$ and $\SO(n,F)$ consists of the skew-symmetric $n\times n$ matrices, with the Lie bracket $[,]$ given by the commutator. One Lie algebra corresponds to both groups. It is often denoted by $\mathfrak{o}(n, F)$ or $\mathfrak{so}(n, F)$, and called the \termin{orthogonal Lie algebra} or \termin{special orthogonal Lie algebra}.
+\end{rem}
+
+\begin{exam}\label{1.2}
+  The set of \termin{upper triangular matrices} $\tt(n,F)$; the set of \termin{strictly upper triangular matrices} $\nn(n,F)$; the set of all \termin{diagonal matrices} $\dd(n,F)$.
+  \begin{align}
+    [\dd(n,F),\nn(n,F)]&=\nn(n,F) \\
+    [\tt(n,F),\tt(n,F)]&=\nn(n,F)
+  \end{align}
+\end{exam}
+
+\begin{exam}\label{1.4}
+  The only $2-$dimensional non-Abelian Lie algebra has a basis $x,y$ with commutation:
+  \begin{equation*}
+    [x,y]=x
+  \end{equation*}
+\end{exam}
+
+\begin{itemize}
+  \item Derivation
+  \begin{itemize}
+    \item Inner derivation
+    \item Jacobi identity is equivalent to say all $\ad x$ are derivations.
+    \item Adjoint representation
+  \end{itemize}
+  \item Structure constants
+\end{itemize}
+
+\begin{ex}
+  Let $L$ be the real vector space $\RR^3$. Define $[x y] = x \times y$ (cross product of vectors) for $x, y \in L$, and verify that $L$ is a Lie algebra. Write down the structure constants relative to the usual basis of $\RR^3$.
+\end{ex}
+\begin{proof}
+  Let $e_1,e_2,e_3$ be the basis of $L$, then $e_i\times e_j=e_k$ for $(ijk)$ a cycle of $(123)$. To verify that $L$ is a Lie algebra, it suffices to verify the Jacobi identity.
+
+  The structure constants are $a_{12}^3=1, a_{23}^1=1, a_{13}^2=-1$.
+\end{proof}
+
+\begin{ex}\label{ex1.2}
+  Verify that the following equations and those implies by skew-symmetric bilinear define a Lie algebra structure on a three dimensional vector space with basis $x, y, z$: $[x y] = z, [x z] = y, [y z] = 0.$
+\end{ex}
+\begin{proof}
+  The structure constants are $a_{12}^3=1, a_{23}^1=0, a_{13}^2=1$.
+\end{proof}
+
+\begin{ex}
+  Let $x=\begin{pmatrix}
+           \begin{smallmatrix}
+           0 & 1\\
+           0 & 0 \\
+           \end{smallmatrix}
+         \end{pmatrix}
+  , h=\begin{pmatrix}
+           \begin{smallmatrix}
+           1 & 0\\
+           0 & -1 \\
+           \end{smallmatrix}
+         \end{pmatrix}
+  , y=\begin{pmatrix}
+           \begin{smallmatrix}
+           0 & 0\\
+           1 & 0 \\
+           \end{smallmatrix}
+         \end{pmatrix}$
+  be an ordered basis for $\sl(2,F)$. Compute the matrices of $\ad x, \ad h, \ad y$ relative to this basis.
+\end{ex}
+\begin{proof}
+  $\ad x=\begin{pmatrix}
+           \begin{smallmatrix}
+           0 & -2 & 0 \\
+           0 & 0 & 1 \\
+           0 & 0 & 0 \\
+           \end{smallmatrix}
+         \end{pmatrix}
+  , \ad h=\begin{pmatrix}
+           \begin{smallmatrix}
+           2 & 0 & 0 \\
+           0 & 0 & 0 \\
+           0 & 0 & -2 \\
+           \end{smallmatrix}
+         \end{pmatrix}
+  , \ad y=\begin{pmatrix}
+           \begin{smallmatrix}
+           0 & 0 & 0 \\
+           -1 & 0 & 0 \\
+           0 & 2 & 0 \\
+           \end{smallmatrix}
+         \end{pmatrix}$.
+\end{proof}
+
+\begin{ex}
+  Find a linear Lie algebra isomorphic to the nonabelian two dimensional algebra constructed in Example \ref{1.4}.
+\end{ex}
+\begin{proof}
+  Consider the adjoint representation $\ad x=\begin{pmatrix}
+           \begin{smallmatrix}
+           0 & 1\\
+           0 & 0 \\
+           \end{smallmatrix}
+         \end{pmatrix}
+  , \ad y=\begin{pmatrix}
+           \begin{smallmatrix}
+           -1 & 0\\
+           0 & 0 \\
+           \end{smallmatrix}
+         \end{pmatrix}$.
+\end{proof}
+
+\begin{ex}
+  Verify the assertions made in example \ref{1.2}, and compute dimension of each algebra, by exhibiting bases.
+\end{ex}
+\begin{proof}
+  $\dim \tt(n,F)=\frac{l^2+l}{2}$, basis: $e_{ij} (1\leqslant i\leqslant j\leqslant l)$;
+  $\dim \nn(n,F)=\frac{l^2-l}{2}$, basis: $e_{ij} (1\leqslant i< j\leqslant l)$;
+  $\dim \dd(n,F)=l$, basis: $e_{ii} (1\leqslant i\leqslant l)$.
+\end{proof}
+
+\begin{ex}
+  Let $x\in\gl(n,F)$ have $n$ distinct eigenvalues $a_1,\cdots,a_n$ in $F$. Prove that the eigenvalues of $\ad x$ are precisely the $n^2$ scalars $a_i-a_j (1\leqslant i,j\leqslant n)$, which of course need not be distinct.
+\end{ex}
+\begin{proof}
+  Choose a basis for $F^n$ so that $x$ is a diagonal matrix whose entries are $a_1,\cdots,a_n$. Then the matrices $e_{ij}$ are eigenvalues of $x$ since $xe_{ij}-e_{ij}x = a_ie_{ij}-a_je_{ij}$.
+\end{proof}
+
+\begin{ex}
+  Let $\ss(n,F)$ denote the \termin{scalar matrices} in $\gl(n,F)$. If $\Char F$ is $0$ or else a prime not dividing $n$, prove that $\gl(n,F) = \sl(n,F)\oplus \ss(n,F)$, with $[\ss(n,F),\gl(n,F)] = 0$.
+\end{ex}
+\begin{proof}
+  Choose $x\in\gl(n,F)$. Let $s$ be the scale $tr(x)/n$. Then $x-s\in \sl(n,F)$ and $s\in\ss(n,F)$, so $\sl(n,F)$ and $\ss(n,F)$ generate $\gl(n,F)$. Since the sum of their dimensions is $n^2$, $\gl(n,F) = \sl(n,F)+\ss(n,F)$ is a direct sum. Since scalar matrices commute with all other matrices, we also get $[\ss(n,F),\gl(n,F)] = 0$.
+\end{proof}
+
+\begin{ex}
+  Verify the stated dimension of $D_l$.
+\end{ex}
+
+\begin{ex}\label{1.9}
+  When $\Char F = 0$, show that each classical algebra $L = A_l,B_l,C_l$ or $D_l$ is equal to $[LL]$. (This shows again that each algebra consists of trace $0$ matrices.)
+\end{ex}
+\begin{proof}
+  It is sufficient to show $L\subset[L,L]$.
+  \begin{itemize}
+    \item $A_1$:
+    \begin{align*}
+      e_{12} &= \frac{1}{2}[h,e_{12}] \\
+      e_{21} &= \frac{1}{2}[e_{21},h] \\
+      h &= [e_{12},e_{21}]
+    \end{align*}
+    \item $A_l(l\geqslant2)$:
+    \begin{align*}
+      e_{ij} &= [e_{ik},e_{kj}],\qquad k\neq i, j; i\neq j \\
+      h_i &= [e_{ij},e_{ji}], \qquad j\neq i
+    \end{align*}
+    \item $B_l(l\geqslant2)$:
+    \begin{align*}
+      e_{1,l+i+1}-e_{i+1,1} &= [e_{1,j+1}-e_{l+j+1,1},e_{j+1,l+i+1}-e_{i+1,l+j+1}] \\
+      e_{1,i+1} - e_{l+i+1,1} &= [e_{1,l+j+1} - e_{j+1,1}, e_{l+j+1,i+1} - e_{l+i+1,j+1}] \\
+      e_{i+1,i+1} - e_{l+i+1,l+i+1} &= [e_{i+1,1} - e_{1,l+i+1}, e_{1,i+1} - e_{l+i+1,1}] \\
+      e_{i+1,j+1} - e_{l+i+1,l+j+1} &= [e_{i+1,1} - e_{1,l+i+1}, e_{1,j+1} - e_{l+j+1,1}] \\
+      e_{i+1,l+j+1} - e_{j+1,l+i+1} &= [e_{i+1,i+1} - e_{l+i+1,l+i+1}, e_{i+1,l+j+1} - e_{j+1,l+i+1}] \\
+      e_{l+i+1,j+1} - e_{j+l+1,i+1} &= [e_{l+i+1,l+i+1} - e_{i+1,i+1}, e_{l+i+1,j+1} - e_{j+l+1,i+1}]
+    \end{align*}
+    where $1 \leqslant i \neq j \leqslant l$.
+    \item $C_l(l\geqslant3)$:
+    \begin{align*}
+      e_{ii}-e_{l+i,l+i} &= [e_{i,l+i}, e_{l+i,i}] \\
+      e_{ij} - e_{l+j,l+i} &= [e_{ii} - e_{l+i,l+i}, e_{ij} - e_{l+j,l+i}],\qquad i\neq j \\
+      e_{i,l+j} + e_{j,l+i} &= [e_{ii} - e_{l+i,l+i}, e_{i,l+j} + e_{j,l+i}] \\
+      e_{l+i,j} + e_{l+j,i} &= [e_{l+i,l+i} - e_{ii}, e_{l+i,j} + e_{l+j,i}]
+    \end{align*}
+    \item $D_l(l\geqslant2)$:
+    \begin{align*}
+      e_{ii} - e_{l+i,l+i} &= \frac{1}{2} [e_{ij} - e_{l+j,l+i}, e_{ji} - e_{l+i,l+j}] \\
+      & \quad+ \frac{1}{2} [e_{i,l+j} - e_{j,l+i}, e_{l+j,i} - e_{l+i,j} ] \\
+      e_{ij} - e_{l+j,l+i} &= [e_{ii} - e_{l+i,l+i}, e_{ij} - e_{l+j,l+i}] \\
+      e_{i,l+j} - e_{j,l+i} &= [e_{ii} - e_{l+i,l+i}, e_{i,l+j} - e_{j,l+i}] \\
+      e_{l+i,j} - e_{l+j,i} & = [e_{l+i,l+i} - e_{ii}, e_{l+i,j} - e_{l+j,i}]
+    \end{align*}
+  \end{itemize}
+\end{proof}
+
+\begin{ex}
+  For small values of $l$, isomorphisms occur among certain of the classical algebras. Show that $A_1,B_1,C_1$ are all isomorphic, while $D_1$ is the one dimensional Lie algebra. Show that $B_2$ is isomorphic to $C_2$, $D_3$ to $A_3$. What can you say about $D_2$?
+\end{ex}
+\begin{proof}
+  The isomorphism of $A_1,B_1,C_1$ is given as follows:
+    \begin{equation*}
+    \begin{array}{ccccc}
+      A_1 & \to & B_1 & \mapsto & C_1 \\
+      e_{11} - e_{22} & \mapsto & 2(e_{22} - e_{33}) & \mapsto & e_{11} - e_{22} \\
+      e_{12} & \mapsto & 2(e_{13} - e_{21}) & \mapsto & e_{12} \\
+      e_{21} & \mapsto & 2(e_{12} - e_{31}) & \mapsto & e_{21}
+    \end{array}
+    \end{equation*}
+
+    For $B_2,C_2$ we first calculate the eigenvectors for $h_1 = e_{22} - e_{44}, h_2 = e_{33} - e_{55}$ and $h'_1 = e_{11} - e_{33}, h'_2 = e_{22} - e_{44}$ respectively. We denote $\lambda = (\lambda(h_1), \lambda(h_2))$ for the eigenvalue of $h_1, h_2$, $\lambda'$ is similar. See the following table:
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+      \multicolumn{2}{|c|}{$B_2$} & \multicolumn{2}{|c|}{$C_2$} \\
+      \hline
+      $\alpha = (1, 0)$ & $e_{21} - e_{14}$ & $\alpha' = (-1, 1)$ & $e_{21} - e_{34}$ \\
+      \hline
+      $-\alpha = (-1, 0) $&$ e_{12} - e_{41} $&$ -\alpha' = (1,-1) $&$ e_{12} - e_{43}$ \\
+      \hline
+      $\beta = (-1, 1) $&$ e_{32} - e_{45} $&$ \beta' = (2, 0) $&$ e_{13}$ \\
+      \hline
+      $-\beta = (1,-1) $&$ e_{23} - e_{54} $&$ -\beta' = (-2, 0) $&$ e_{31}$ \\
+      \hline
+      $\alpha + \beta = (0, 1) $&$ e_{15} - e_{31} $&$ \alpha' + \beta' = (1, 1) $&$ e_{14} + e_{23}$ \\
+      \hline
+      $-(\alpha + \beta) = (0,-1) $&$ e_{13} - e_{51} $&$ -(\alpha' + \beta') = (-1,-1) $&$ e_{41} + e_{32}$ \\
+      \hline
+      $2\alpha + \beta = (1, 1) $&$ e_{25} - e_{34} $&$ 2\alpha' + \beta' = (0, 2) $&$ e_{24}$ \\
+      \hline
+      $-(2\alpha + \beta) = (-1,-1) $&$ e_{43} - e_{52} $&$ -(2\alpha' + \beta') = (0,-2) $&$ e_{42}$ \\
+      \hline
+    \end{tabular}
+\end{center}
+
+  We make a linear transformation
+  \begin{equation*}
+    \tilde{h_1}'=-\frac{1}{2}h_1'+\frac{1}{2}h_2' , \tilde{h_2}'=\frac{1}{2}h_1'+\frac{1}{2}h_2'
+  \end{equation*}
+
+  Then $\alpha(h_1) = \alpha'(\tilde{h_1}'), \alpha(h_2) = \alpha'(\tilde{h_2}'), \beta(h_1) = \beta'(\tilde{h_1}'), \beta(h_2) = \beta'(\tilde{h_2}')$. So the isomorphism of $B_2,C_2$ is given as follows:
+
+  \begin{equation*}
+    \begin{array}{ccc}
+      B_2 & \to & C_2 \\
+      e_{22} - e_{44} &\mapsto& -\frac{1}{2}(e_{11} - e_{33}) + \frac{1}{2} (e_{22} - e_{44}) \\
+      e_{33} - e_{55} &\mapsto& \frac{1}{2}(e_{11} - e_{33}) + \frac{1}{2}(e_{22} - e_{44}) \\
+      e_{12} - e_{41} &\mapsto& \frac{\sqrt{2}}{2}(e_{12} - e_{43}) \\
+      e_{21} - e_{14} &\mapsto& \frac{\sqrt{2}}{2}(e_{21} - e_{34}) \\
+      e_{32} - e_{45} &\mapsto& e_{13} \\
+      e_{23} - e_{54} &\mapsto& e_{31} \\
+      e_{15} - e_{31} &\mapsto& \frac{\sqrt{2}}{2}(e_{14} + e_{23}) \\
+      e_{13} - e_{51} &\mapsto& \frac{\sqrt{2}}{2}(e_{32} + e_{41}) \\
+      e_{25} - e_{34} &\mapsto& e_{24} \\
+      e_{43} - e_{52} &\mapsto& e_{42}
+    \end{array}
+  \end{equation*}
+
+  For $A_3$ and $D_3$, we calculate the eigenvalues and eigenvectors for $h_1 = e_{11} - e_{22}, h_2 = e_{22} - e_{33}, h_3 = e_{33} - e_{44}$ and $h'_1 = e_{11} - e_{44}, h'_2 = e_{22} - e_{55}, h'_3 = e_{33} - e_{66}$ respectively.
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+      \multicolumn{2}{|c|}{$A_3$} & \multicolumn{2}{|c|}{$D_3$} \\
+      \hline
+      $\alpha = (1, 1,-1)$ & $e_{13}$ & $\alpha' = (0, 1, 1)$ & $e_{26} - e_{35}$ \\
+      \hline
+      $-\alpha = (-1,-1, 1)$ & $e_{31}$ & $-\alpha' = (0,-1,-1)$ & $e_{62} - e_{53}$ \\
+      \hline
+      $\beta = (-1, 1, 1)$ & $e_{24}$ & $\beta' = (0, 1,-1)$ & $e_{23} - e_{65}$ \\
+      \hline
+      $-\beta = (1,-1,-1)$ & $e_{42}$ & $-\beta' = (0,-1, 1)$ & $e_{32} - e_{56}$ \\
+      \hline
+      $\gamma = (-1, 0,-1)$ & $e_{41}$ & $\gamma' = (1,-1, 0)$ & $e_{12} - e_{54}$ \\
+      \hline
+      $-\gamma = (1, 0, 1)$ & $e_{14}$ & $-\gamma' = (-1, 1, 0)$ & $e_{21} - e_{45}$ \\
+      \hline
+      $\alpha + \gamma = (0, 1,-2)$ & $e_{43}$ & $\alpha' + \gamma' = (1, 0, 1)$ & $e_{16} - e_{34}$ \\
+      \hline
+      $-(\alpha +\gamma) = (0,-1, 2)$ & $e_{34}$ & $-(\alpha' + \gamma') = (-1, 0,-1)$ & $e_{61} - e_{43}$ \\
+      \hline
+      $\beta + \gamma = (-2, 1, 0)$ & $e_{21}$ & $\beta' + \gamma' = (1, 0,-1)$ & $e_{13} - e_{64}$ \\
+      \hline
+      $-(\beta + \gamma) = (2,-1, 0)$ & $e_{12}$ & $-(\beta' + \gamma') = (-1, 0, 1)$ & $e_{31} - e_{46}$ \\
+      \hline
+      $\alpha + \beta + \gamma = (-1, 2,-1)$ & $e_{23}$ & $\alpha' + \beta' + \gamma' = (1, 1, 0)$ & $e_{15} - e_{24}$ \\
+      \hline
+      $-(\alpha + \beta + \gamma) = (1,-2, 1)$ & $e_{32}$ & $-(\alpha' + \beta' + \gamma') = (-1,-1, 0)$ & $e_{51} - e_{42}$ \\
+      \hline
+    \end{tabular}
+\end{center}
+
+  We take a linear transformation
+  \begin{equation*}
+    \tilde{h_1}'=-h_1'+h_3' , \tilde{h_2}'=h_1'+h_2', \tilde{h_3}'=-h'_1-h'_3
+  \end{equation*}
+
+  Then $\alpha(h_i) = \alpha'(\tilde{h_i}'), \beta(h_i) = \beta'(\tilde{h_i}'),\gamma(h_i) = \gamma'(\tilde{h_i}'), i = 1,2,3$. The isomorphism of $A_3$ and $D_3$ can be given as follows:
+
+  \begin{equation*}
+    \begin{array}{ccc}
+      A3 &\to& D3 \\
+e_{11} - e_{22} &\mapsto& -(e_{11} - e_{44}) + (e_{33} - e_{66}) \\
+e_{22} - e_{33} &\mapsto& (e_{11} - e_{44}) + (e_{22} - e_{55}) \\
+e_{33} - e_{44} &\mapsto& -(e_{11} - e_{44}) - (e_{33} - e_{66}) \\
+e_{13} &\mapsto& e_{26} - e_{35} \\
+e_{31} &\mapsto& e_{62} - e_{53} \\
+e_{24} &\mapsto& e_{23} - e_{65} \\
+e_{42} &\mapsto& e_{32} - e_{56} \\
+e_{41} &\mapsto& e_{12} - e_{54} \\
+e_{14} &\mapsto& e_{21} - e_{45} \\
+e_{43} &\mapsto& e_{16} - e_{34} \\
+e_{34} &\mapsto& e_{61} - e_{43} \\
+e_{21} &\mapsto& e_{13} - e_{64} \\
+e_{12} &\mapsto& e_{31} - e_{46} \\
+e_{23} &\mapsto& e_{15} - e_{24} \\
+e_{32} &\mapsto& e_{51} - e_{42} \\
+    \end{array}
+  \end{equation*}
+\end{proof}
+\begin{rem}
+  We have
+  \begin{align*}
+    \so(2) &\cong S^1 \\
+    \so(3) &\cong \sl(2) \cong \sp(1) \\
+    \so(4) &\cong \sl(2)\oplus\sl(2) \\
+    \so(5) &\cong \sp(4) \\
+    \so(6) &\cong \sl(4)
+  \end{align*}
+\end{rem}
+\begin{rem}
+  When $F=\CC$, there exist another isomorphism: $\su(2,\CC)\cong\sl(2,\CC)$, where the lie structure of $\su(2,\CC)$ is given by
+  \begin{equation*}
+    [e_i,e_j]=\epsilon_{ijk}e_k
+  \end{equation*}
+  i.e.
+  \begin{align*}
+    [e_1,e_2] & =e_3 \\
+    [e_2,e_3] & =e_1 \\
+    [e_3,e_1] & =e_2
+  \end{align*}
+
+  However, $\su(2,\RR)\not\cong\sl(2,\RR)$.
+
+  This example shows that isomorphic Lie algebras over $\CC$ may \textbf{not} be isomorphic over other fields.
+\end{rem}
+
+\begin{ex}
+  Verify that the commutator of two derivations of an $F-$algebra is again a derivation, whereas the ordinary product need not be.
+\end{ex}
+\begin{proof}
+  Let $D_1$ and $D_2$ be derivations of an $F-$algebra $R$, and pick $x,y\in R$. we check that $[D_1,D_2]$ is a derivation:
+  \begin{align*}
+    [D_1,D_2](xy) &= D_1(D_2(xy)) - D_2(D_1(xy)) \\
+    &= D_1(D_2(x)y + xD_2(y)) - (D_2(D_1(x)y + xD_1(y))) \\
+    &= D_1(D_2(x))y + D_2(x)D_1(y) + D_1(x)D_2(y) + xD_1(D_2(y))- \\
+    & \qquad (D_2(D_1(x))y + D_1(x)D_2(y) + D_2(x)D_1(y) + xD_2(D_1(y))) \\
+    &= (D_1(D_2(x)) - D_2(D_1(x)))y + x(D_1(D_2(y)) - D_2(D_1(y))) \\
+    &= [D_1,D_2](x)y + x[D_1,D_2](y).
+  \end{align*}
+
+  Now consider the $F-$algebra $F[x, y]$ with derivations $\delta=\pfrac{}{x}$ and $\varepsilon=\pfrac{}{y}$. Then their product is not a derivation. If it were, then $\varepsilon(a)\delta(b)+\delta(a)\varepsilon(b) = 0$ for all $a, b \in F[x, y]$, but this is false by taking $a = x, b = y$.
+\end{proof}
+
+\begin{ex}
+  Let $L$ be a Lie algebra over an algebraically closed field and let $x\in L$. Prove that the subspace of $L$ spanned by the eigenvectors of $\ad x$ is a subalgebra.
+\end{ex}
+\begin{proof}
+  By definition, it is closed under addition. To see that it closed under the Lie bracket, we need only do so for eigenvectors $v$ and $w$ of $\ad x$. In particular, we have $[x,v] = av$ and $[x,w] = bw$ for some $a, b \in F$. Then
+  \begin{equation*}
+    [x,[v,w]] = [[x,v],w] - [[x,w], v] = a[v,w] - b[w,v] = (a+b)[v,w]
+  \end{equation*}
+  so $[v,w]$ is also an eigenvector of $\ad x$. Hence the subspace of $L$ spanned by eigenvectors of $\ad x$ is a subalgebra of $L$.
+\end{proof}
+
+\section{Ideals and homomorphisms }
+  \begin{itemize}
+    \item \termin{Normalizer} $N_L(K)$: the largest Lie subalgebra of $L$ in which $K$ is a Lie ideal.
+    \begin{itemize}
+      \item A subalgebra $K$ is called \termin{self-normalizing} if $N_L(K)=K$.
+    \end{itemize}
+    \item If a derivation $\delta$ is nilpotent, then $e^{\delta}\in \Aut(L)$.
+    \begin{itemize}
+      \item Leibnitz' rule:
+      \begin{equation*}
+        \frac{\delta^n}{n!}(xy)=\sum_{i=0}^{n}\frac{\delta^ix}{i!}\frac{\delta^{n-i}y}{(n-i)!}
+      \end{equation*}
+    \end{itemize}
+  \end{itemize}
+
+\begin{ex}
+  Prove that the set of all inner derivations is an ideal of $\Der L$.
+\end{ex}
+\begin{proof}
+  For any $\delta\in\Der L,x\in L$, $[\delta,\ad x]=\ad \delta(x)$ is a inner derivation.
+\end{proof}
+
+\begin{ex}
+  Show that $\sl(n,F)$ is precisely the derived algebra of $\gl(n,F)$ (cf. Exercise \ref{1.9}).
+\end{ex}
+\begin{proof}
+  It is easy to see
+  \begin{equation*}
+    [\gl(n, F), \gl(n, F)] \subset \sl(n, F)
+  \end{equation*}
+
+  Conversely, by exercise \ref{1.9},
+  \begin{equation*}
+    \sl(n, F) = [\sl(n, F), \sl(n, F)] \subset [\gl(n, F), \gl(n, F)]
+  \end{equation*}
+\end{proof}
+
+\begin{ex}\label{2.3}
+  Prove that the center of $\gl(n, F)$ equals $\ss(n, F)$ (the scalar matrices). Prove that $\sl(n, F)$ has center $0$, unless $\Char F$ divides $n$, in which case the center is $\ss(n, F)$.
+\end{ex}
+\begin{proof}
+  Clearly, we have $\ss(n, F) \subset Z(\gl(n, F))$. Conversely, Let $A = \sum\limits_{i,j}a_{ij}e_{ij} \in Z(\gl(n, F))$, then for each $e_{kl} \in \gl(n, F)$,
+  \begin{align*}
+    [A, e_{kl}] &= \sum_{i,j} a_{ij} [e_{ij} , e_{kl}] \\
+                      &= \sum_{i,j} a_{ij} (\delta_{jk}e_{il} - \delta_{li}e_{kj}) \\
+                      &= \sum_{i=1}^{n} a_{ik}e_{il} - \sum_{j=1}^{n} a_{lj}e_{kj} \\
+                      &= (a_{kk} - a_{ll}) e_{kl} + \sum_{\substack{i=1 \\ i\neq k}}^{n} a_{ik}e_{il} - \sum_{\substack{j=1 \\ j\neq l}}^{n} a_{lj}e_{kj}
+  \end{align*}
+
+  So
+  \begin{equation*}
+    a_{kk} = a_{ll}, a_{ij} = 0, i \neq j
+  \end{equation*}
+  i.e.
+  \begin{equation*}
+    A\in \ss(n, F)
+  \end{equation*}
+
+  For $\sl(n, F)$, if $c \in Z(\sl(n, F))$, $\forall x \in \sl(n, F), [x, c] = 0$. But we know $\gl(n, F) = \sl(n, F)+ \ss(n, F)$ and $\ss(n, F)$ is the center of $\gl(n, F)$. Hence $c \in Z(\gl(n, F)) = \ss(n, F)$. We have
+  \begin{equation*}
+    Z(\sl(n, F)) = \sl(n, F)\cap\ss(n, F)
+  \end{equation*}
+
+  If $\Char F$ does not divide $n$, each $aI \in \ss(n, F),a\neq0$ has trace $na \neq 0$, so $aI \not\in \sl(n, F)$. i.e., $Z(\sl(n, F)) = \sl(n, F) \cap\ss(n, F) = 0$. Else if $\Char F$ divides $n$, each $aI \in \ss(n, F)$ has trace $na = 0$, in this case $Z(\sl(n, F)) = \sl(n, F) \cap \ss(n, F) = \ss(n, F)$.
+\end{proof}
+
+\begin{ex}
+  Show that (up to isomorphism) there is a unique Lie algebra over $F$ of dimension $3$ whose derived algebra has dimension $1$ and lies in $Z(L)$.
+\end{ex}
+\begin{proof}
+  Let $L_0$ be the $3-$dimensional lie algebra over $F$ with basis $(x_0, y_0, z_0)$ and commutation:
+  \begin{equation*}
+    [x_0, y_0] = z_0, [x_0, z_0] = [y_0, z_0] = 0.
+  \end{equation*}
+
+  Suppose $L$ be any $3-$dimensional lie algebra over $F$ whose derived algebra has dimension $1$ and lies in $Z(L)$. We can take a basis $(x, y, z)$ of $L$ such that $z \in [LL] \subset Z(L)$. By hypothesis, $[x, y] = \lambda z, [x, z] = [y, z] =0, \lambda\in F$. Then $L \to L_0, x \mapsto x_0, y \mapsto y_0, z \mapsto \lambda z_0$ is a isomorphism.
+\end{proof}
+
+\begin{ex}
+  Suppose $\dim L = 3,L = [LL]$. Prove that $L$ must be simple. [Observe first that any homomorphic image of $L$ also equals its derived algebra.] Recover the simplicity of $\sl(2, F), \Char F \neq 2$.
+\end{ex}
+\begin{proof}
+  Let $I$ be a proper ideal of $L$. It is clear from surjectivity of $L \to L/I$ that $[L/I, L/I] = L/I$. From this, we rule out $\dim I = 2$ because then $L/I$ would have to be Abelian, $[L/I, L/I] = 0 \neq L/I$. Also, $\dim I = 1$ implies that $\dim L/I = 2$, and the only non-Abelian $2-$dimensional Lie algebra is described in Example \ref{1.4} and is not equal to its derived algebra. Hence $I = 0$, so $L$ is simple.
+
+  Since $[\sl(2, F), \sl(2, F)] = \sl(2, F)$ if $\Char F \neq 2$, and $\dim\sl(2, F) = 3$, we see that $\sl(2, F)$ is simple for $\Char F \neq 2$.
+\end{proof}
+
+\begin{ex}
+  Prove that $\sl(3, F)$ is simple, unless $\Char F = 3$ (cf. Exercise \ref{2.3}). [Use the standard basis $h_1, h_2, e_{ij}(i \neq j)$. If $I \neq 0$ is an ideal, then $I$ is the direct sum of eigenspaces for $\ad h_1$ or $\ad h_2$, compare the eigenvalues of $\ad h_1, \ad h_2$ acting on the $e_{ij}$.]
+\end{ex}
+\begin{proof}
+  Let $I\neq 0$ be an ideal, and $V_0=\Span\{h_1,h_2\}$. It is easy to see that If one of $h_1,h_2$ is contained in $I$, then $I=L$.
+
+  Let $a\in I$ be an eigenvector of $\ad h_1$ with eigenvalue $\lambda$, then by compute the eigenvalues of $\ad h_1$, we see that there exist an $a'\in L$ having eigenvalue $-\lambda$, then $[a,a']\in I$. On the other hand,
+  \begin{equation*}
+    \ad h_1 ([a,a']) = [\lambda a,a']+[a,-\lambda a']=0
+  \end{equation*}
+  therefore $[a,a']\in V_0$. Since $I$ is the direct sum of eigenspaces, $V_0\subset I$, which implies $I=L$. Hence $L$ is simple.
+\end{proof}
+
+\begin{ex}
+  Prove that $\tt(n, F)$ and $\dd(n, F)$ are self-normalizing subalgebras of $\gl(n, F)$, whereas $\nn(n, F)$ has normalizer $\tt(n, F)$.
+\end{ex}
+\begin{proof}
+  Let $a = \sum\limits_{ij} a_{ij}e_{ij} \in \gl(n, F), [a, \tt(n, F)] \subset \tt(n, F)$. But
+  \begin{align*}
+    [a, e_{kk}] &= \sum_{ij} a_{ij}\delta_{jk}e_{ik} - \sum_{ij} a_{ij}\delta_{ki}e_{kj} \\
+                      &= \sum_{i} a_{ik}e_{ik} - \sum_{j} a_{kj}e_{kj} \\
+                      &\subset \tt(n, F)
+  \end{align*}
+
+  It must be $a_{ik} = 0$ for $i > k$, and $a_{kj} = 0$ for $j < k$. Hence $a_{kl} = 0$ for all $k > l$. This implies $a \in \tt(n, F)$, i.e., $\tt(n, F)$ is the self-normalizing subalgebras of $\gl(n, F)$.
+
+  Similarly for $\dd(n, F)$, let $a = \sum_{ij} a_{ij}e_{ij} \in \gl(n, F), [a, \dd(n, F)] \subset \dd(n, F)$. But
+  \begin{align*}
+    [a, e_{kk}] &= \sum_{ij} a_{ij}\delta_{jk}e_{ik} - \sum_{ij} a_{ij}\delta_{ki}e_{kj} \\
+                      &= \sum_{i} a_{ik}e_{ik} - \sum_{j} a_{kj}e_{kj} \\
+                      &\subset \dd(n, F)
+  \end{align*}
+
+  It must be $a_{ik} = 0$ for $i \neq k$, and $a_{kj} = 0$ for $j \neq k$. Hence $a_{kl} = 0$ for all $k \neq l$. This implies $a \in \dd(n, F)$, i.e., $\dd(n, F)$ is the self-normalizing subalgebras of $\gl(n, F)$.
+\end{proof}
+
+\begin{ex}\label{2.8}
+  Prove that in each classical linear Lie algebra, the set of diagonal matrices is a self-normalizing subalgebra, when $\Char F = 0$.
+\end{ex}
+
+\begin{ex}
+  Prove the basic theorem for homomorphisms of Lie algebras.
+\end{ex}
+
+\begin{ex}
+  Let $\sigma$ be the automorphism of $\sl(2, F)$ defined as
+  \begin{equation*}
+    \sigma=\exp\ad x\cdot\exp\ad(-y)\cdot\exp\ad x
+  \end{equation*}
+  Verify that $\sigma(x) = -y, \sigma(y) = -x, \sigma(h) = -h$.
+\end{ex}
+\begin{proof}
+  \begin{align*}
+    \exp \ad x(x) &= x \\
+    \exp \ad x(h) &= h - 2x \\
+    \exp \ad x(y) &= y + h - x \\
+    \exp \ad(-y)(x) &= x + h - y \\
+    \exp \ad(-y)(h) &= h - 2y \\
+    \exp \ad(-y)(y) &= y
+  \end{align*}
+  \begin{align*}
+    \sigma(x) &= \exp \ad x \exp \ad (-y)(x) \\
+    &= \exp \ad x(x + h - y) \\
+    &= x + h - 2x - y - h + x \\
+    &= -y \\
+    \sigma(y) &= \exp \ad x \exp \ad (-y)(y + h - x) \\
+    &= \exp \ad x(y + h - 2y - x - h + y) \\
+    &= \exp \ad x(-x) \\
+    &= -x \\
+    \sigma(h) &= \exp \ad x \exp \ad (-y)(h - 2x) \\
+    &= \exp \ad x(h - 2y - 2(x + h - y)) \\
+    &= \exp \ad x(-h - 2x) \\
+    &= -h + 2x - 2x = -h
+  \end{align*}
+\end{proof}
+
+\begin{ex}
+  If $L = \sl(n, F), g \in \GL(n, F)$, prove that the map of $L$ to itself defined by $x \mapsto -gx^tg^{-1}$ ($x^t=$ transpose of $x$) belongs to $\Aut L$. When $n = 2, g =$ identity matrix, prove that this automorphism is inner.
+\end{ex}
+\begin{proof}
+  $g\in \GL(n, F)$ and $\Tr(-gx^tg^{-1}) = -\Tr(x)$, i.e, $\Tr(x) = 0$ if and only if so is $\Tr(-gx^tg^{-1})$. So the map $x \mapsto -gx^tg^{-1}$ is a linear space automorphism of $\sl(n, F)$. We just verify it is a homomorphism of lie algebras:
+  \begin{align*}
+    [-gx^tg^{-1},-gy^tg^{-1}] &= gx^ty^tg^{-1} -gy^tx^tg^{-1} \\
+    &= -g((xy)^t - (yx)^t)g^{-1} \\
+    &= -g[x, y]^tg^{-1}
+  \end{align*}
+
+  When $n = 2, g=$ identity matrix, the automorphism $\sigma\colon
+  x \mapsto -x^t$, i.e.
+  \begin{equation*}
+   \sigma(x) = -y, \sigma(y) = -x, \sigma(h) = -h
+  \end{equation*}
+  So $\sigma = \exp \ad x \exp \ad(-y) \exp \ad x$ is an inner automorphism.
+\end{proof}
+\begin{rem}
+  Warning: An inner automorphism is not exactly of form exp adx with adx is nilpotent. It can be the composition of elements with this form.
+\end{rem}
+
+\begin{ex}
+  Let $L$ be an orthogonal Lie algebra (type $B_l$ or $D_l$). If $g$ is an \termin{orthogonal matrix}, in the sense that $g$ is invertible and $g^tsg = s$, prove that $x \mapsto gxg^{-1}$ defines an automorphism of $L$.
+\end{ex}
+\begin{proof}
+  $x \in B_l$ or $D_l$, $sx = -x^ts$. Hence
+  \begin{align*}
+    sgxg^{-1} &= (g^{-1})^tsxg^{-1} \\
+        &= -(g^{-1})^tx^tsg^{-1} \\
+        &= -(g^{-1})^tx^tg^ts \\
+        &= -(gxg^{-1})^ts
+  \end{align*}
+
+  So the map $x \mapsto gxg^{-1}$ is a linear automorphism of $B_l$ or $C_l$. We just verify it is a homomorphism of lie algebras:
+  \begin{equation*}
+    [gxg^{-1}, gyg^{-1}] = gxyg^{-1} - gyxg^{-1} = g[x, y]g^{-1}
+  \end{equation*}
+\end{proof}
+
+\section{Solvable and nilpotent Lie algebras}
+
+
+
+\begin{ex}\label{3.1}
+  Let $I$ be an ideal of $L$. Then each member of the derived series or descending central series of $I$ is also an ideal of $L$.
+\end{ex}
+\begin{proof}
+  For the derived series, it is enough to show that $[I, I]$ is an ideal by induction. Pick $x, y \in I$ and $z \in L$. Then
+  $[z, [x, y]] = -[y, [z, x]] - [x, [y, z]] \in [I, I]$
+  since $[z, x], [y, z] \in I$. For the descending central series of $I$, we have seen that $I^1 = I^{(1)}$ is an ideal. So by induction, suppose that $I^k$ is an ideal. Then pick $x \in I, y \in I^k, z \in L$. We have $[z, [x, y]] = -[y, [z, x]]-[x, [y, z]] \in I^{k+1}$ since $[z, x] \in I$ and $[y, z] \in I^k$. So $I^{k+1}$ is also an ideal.
+\end{proof}
+
+\begin{ex}
+  Prove that $L$ is solvable if and only if there exists a chain of subalgebras $L = L_0 \supset L_1 \supset L_2 \supset \cdots \supset L_k = 0$ such that $L_{i+1}$ is an ideal of $L_i$ and such that each quotient $L_i/L_{i+1}$ is abelian.
+\end{ex}
+\begin{proof}
+  If $L$ is solvable, take $L_i = L^{(i)}$. Then $[L_i,L_i]$ is an ideal of $L_i$ by the Jacobi identity, and $L_i/[L_i,L_i]$ is abelian. Conversely, given such a chain of subalgebras, we see by induction that $L^(i) \subset L_i$ because $[L_i,L_i]$ is the smallest ideal $I$ for which $L_i/I$ is abelian.
+\end{proof}
+
+\begin{ex}\label{3.3}
+  Let $\Char F = 2$. Prove that $\sl(2, F)$ is nilpotent.
+\end{ex}
+\begin{proof}
+  Let $(x, h, y)$ be the standard basis for $\sl(2, F)$, then $[hx] = 2x = 0, [xy] = h, [hy] = -2y = 0$. Hence $[\sl(2, F), \sl(2, F)] = Fh$, then $\sl(2,F)$ is nilpotent.
+\end{proof}
+
+\begin{ex}
+  Prove that $L$ is solvable (resp. nilpotent) if and only if $\ad L$ is solvable (resp. nilpotent).
+\end{ex}
+\begin{proof}
+  $\ad L$ is a homomorphic image of $L$, moreover, $\ad L\cong L/Z(L)$.
+\end{proof}
+
+\begin{ex}\label{3.5}
+  Prove that the non-abelian two dimensional algebra constructed in Example \ref{1.4} is solvable but not nilpotent. Do the same for the algebra in Exercise \ref{ex1.2}.
+\end{ex}
+\begin{proof}
+  The $2-$dimensional non-abelian Lie algebra $L$ has basis $\{x, y\}$ such that $[x, y] = x$. Then it is clear that $L^i$ is the subspace spanned by $x$ for $i > 0$, so $L$ is not nilpotent. However, $L^{(1)} = \< x \>$, so $L^{(2)} = 0$ and hence $L$ is solvable.
+
+  The Lie algebra $L$ of Exercise \ref{ex1.2} has a basis $\{x, y, z\}$ such that $[x, y] = z, [x, z] = y$ and $[y, z] = 0$. Then $L^i = \< y, z \>$ for $i > 0$, so $L$ is not nilpotent. However, $L^{(1)} = \< y, z\>$ and $L^{(2)} = 0$, so $L$ is solvable.
+\end{proof}
+
+\begin{ex}
+  Prove that the sum of two nilpotent ideals of a Lie algebra $L$ is again a nilpotent ideal. Therefore, $L$ possesses a unique maximal nilpotent ideal. Determine this ideal for each algebra in Exercise \ref{3.5}.
+\end{ex}
+\begin{proof}
+  Let $I, J$ are nilpotent ideals. We can deduce by induction that
+  \begin{equation*}
+    (I + J)^n\subset \sum_{k=0}^n I^k\cap J^{n-k}
+  \end{equation*}
+  where $I^0=J^0=L$. Then $I+J$ is clear a nilpotent ideal.
+
+  Taking the sum of all nilpotent ideals of $L$ gives a unique maximal nilpotent ideal.
+
+  In the $2-$dimensional algebra of Example \ref{1.4}, the maximal nilpotent ideal can have dimension at most $1$ since it is not itself nilpotent, hence is the subspace spanned by $x$.
+  Similarly, the unique maximal nilpotent ideal of the Lie algebra of Exercise \ref{ex1.2} is the subspace spanned by $y$ and $z$.
+\end{proof}
+
+\begin{ex}
+  Let $L$ be nilpotent, $K$ a proper subalgebra of $L$. Prove that $N_L(K)$ includes $K$ properly.
+\end{ex}
+\begin{proof}
+  Since $K$ is a subalgebra of $L$, $\ad K$ acts on $L/K$ (quotient taken as vector spaces). Since $K$ is a proper subalgebra of $L$, we have $L/K \neq 0$, so there exists a vector $v \not\in K$ such that $[K, v] \subset K$. In particular, $v \in N_L(K)$, so $N_L(K)$ properly contains $K$.
+\end{proof}
+
+\begin{ex}\label{3.8}
+  Let $L$ be nilpotent. Prove that $L$ has an ideal of codimension $1$.
+\end{ex}
+\begin{proof}
+  If $\dim L = 1$, then $0$ is a codimension $1$ ideal. So suppose $\dim L > 1$. If $L$ is abelian, then we take any codimension $1$ subspace. Otherwise, $0 < \dim L/[L,L] < \dim L$ since $L$ is nilpotent. Since $L=[L,L]$ is abelian, it has a codimension $1$ ideal $I$. By the dimension formula for vector spaces the inverse image of $I$ has codimension $1$ in $L$.
+\end{proof}
+
+\begin{ex}
+  Prove that every nilpotent Lie algebra $L$ has an outer derivation, as follows: Write $L = K + Fx$ for some ideal $K$ of codimension one (Exercise \ref{3.8}). Then $C_L(K) \neq 0$ (why?). Choose $n$ so that $C_L(K) \subset L^n, C_L(K) \not\subset L^{n+1}$, and let $z \in C_L(K) - L^{n+1}$. Then the linear map $\delta$ sending $K$ to $0$, $x$ to $z$, is an outer derivation.
+\end{ex}
+\begin{proof}
+  If $K = 0$, then $C_L(K) = L$. Otherwise, $K$ is nonzero and nilpotent since it is a subalgebra of $L$, and hence $Z(K) \neq 0$. Since $Z(K) \subset C_L(K)$, we conclude that $C_L(K) \neq 0$.
+
+  For all $k_1 + \lambda_1x, k_2 + \lambda_2x \in L, [k_1 + \lambda_1x, k_2 + \lambda_2x] \in K$, so $\delta([k_1 + \lambda_1x, k_2 + \lambda_2x]) = 0$.
+  In the other hand,
+  \begin{align*}
+   &\ [\delta(k_1 + \lambda_1x), k_2 + \lambda_2x] + [k_1 + \lambda_1x, \delta(k_2 + \lambda_2x)] \\
+   =&\ [\lambda_1z, k_2 + \lambda_2x] + [k_1 + \lambda_1x, \lambda_2z] \\
+   =&\ \lambda_1\lambda_2[z, x] + \lambda_1\lambda_2[x, z] \\
+   =&\ 0
+  \end{align*}
+
+  We conclude that $\delta$ is a derivation.
+  If $\delta$ is a inner derivation, $\delta = \ad y$, then $[y,K] = \delta(K) = 0$, so $y \in C_L(K) \in L^n$. Then we have $[y, x] \subset L^{n+1}$. But $[y, x] = \delta(x) = z \not\in L^{n+1}$. This is a contradiction. So $\delta$ is a outer derivation.
+\end{proof}
+
+\begin{ex}
+  Let $L$ be a Lie algebra, $K$ an ideal of $L$ such that $L=K$ is nilpotent and such that $\local{\ad x}{K}$ is nilpotent for all $x\in L$. Prove that $L$ is nilpotent.
+\end{ex}
+\begin{proof}
+  If $L/K$ is nilpotent, say $(L/K)^n = 0$, then we know that $L^n \subset K$. The fact that $\local{\ad x}{K}$ is nilpotent for all $x \in L$ then implies that $\local{\ad x}{L^n}$ is nilpotent for all $x\in L$, and hence $L$ is nilpotent by Engel's theorem.
+\end{proof}
