@@ -257,7 +257,7 @@ Unless otherwise specified, $\Phi$ denotes a root system in $E$, with Weyl group
   Since $<\codual{\beta},\codual{\alpha}> = <\alpha,\beta>$ Exercise \ref{9.2}, the Cartan matrix of $\codual{\Phi}$ is the transpose of the Cartan matrix of $\Phi$. In terms of Dynkin diagrams, this corresponds to reversing the directions of the arrows. In the case of $A_l, D_l, E_6, E_7$ and $E_8$, nothing happens, so they are self-dual. In the cases of $F_4$ and $G_2$, one can find an isomorphism to their duals by reordering the simple roots. Finally, $B_l$ and $C_l$ become one another under this correspondence, so they are dual to one another.
 \end{proof}
 
-\begin{ex}
+\begin{ex}\label{11.6}
   Prove that an inclusion of one Dynkin diagram in another (e.g., $E_6$ in $E_7$ or $E_7$ in $E_8$) induces an inclusion of the corresponding root systems.
 \end{ex}
 \begin{proof}
@@ -489,18 +489,39 @@ Unless otherwise specified, $\Phi$ denotes a root system in $E$, with Weyl group
 \begin{ex}
   Prove that the roots in $\Phi$ which are dominant weights are precisely the highest long root and (if two root lengths occur) the highest short root (cf. (10.4) and Exercise \ref{10.11}), when $\Phi$ is irreducible.
 \end{ex}
+\begin{proof}
+	By Lemma 10.4C, roots of same length are $\mathcal{W}-$conjugate to exactly one dominant weight. By Lemma 13.2A, the dominant weight is maximal among its $\mathcal{W}-$orbit. As $\mathcal{W}$ permutes the roots of same length, the conclusion follows.
+\end{proof}
 
 \begin{ex}\label{13.7}
   If $\varepsilon_1, \cdots, \varepsilon_l$ is an \termin{obtuse} basis of the euclidean space $E$ (i.e., all $(\varepsilon_i, \varepsilon_j) \leqslant 0$ for $i \neq j$), prove that the dual basis is \termin{acute} (i.e., all $(\varepsilon^{\ast}_i, \varepsilon^{\ast}_j) \geqslant 0$ for $i \neq j$). [Reduce to the case $l = 2$.]
 \end{ex}
+\begin{proof}
+	In the case $l=2$, this is obvious. Let's show this by induction on $l$. Then, for an euclidean space $E$ with obtuse basis $\varepsilon_1, \cdots, \varepsilon_{l+1}$. Then let $E'$ be the subspace spanned by $\varepsilon_1, \cdots, \varepsilon_l$. Let $\varepsilon'_1, \cdots, \varepsilon'_l$ be the dual basis in $E'$ which, by the conduction hypothesis, is acute. Then the dual basis of $\varepsilon_1, \cdots, \varepsilon_{l+1}$ satisfies
+	\[\varepsilon^{\ast}_i = \varepsilon'_i - (\varepsilon'_i,\varepsilon_{l+1})\varepsilon^{\ast}_{l+1},\qquad i=1,\cdots,l.\]
+	Therefore $(\varepsilon^{\ast}_i,\varepsilon^{\ast}_j) = (\varepsilon'_i,\varepsilon'_j)\geqslant0$ for $1\leqslant i,j \leqslant l$. On the other hand, since $\varepsilon'_i$ are linear combinations of $\varepsilon_1, \cdots, \varepsilon_l$ with nonnegative coefficients, we conclude that $(\varepsilon^{\ast}_i,\varepsilon^{\ast}_{l+1}) \geqslant0$. Note that this proof actually works for more strict result.
+\end{proof}
 
 \begin{ex}
-  Let $\Phi$ be irreducible. Without using the data in Table 1, prove that each $\lambda_i$ is of the form $\sum \limits_j q_{ij}\alpha_j$, where all $q_{ij}$ are positive rational numbers. [Deduce from Exercise \ref{13.7} that all $q_{ij}$ are nonnegative. From $(\lambda_i, \lambda_j) > 0$. Then show that if $q_{ij} > 0$ and $(\alpha_j, \alpha_k) < 0$, then $q_{ik} > 0$.]
+  Let $\Phi$ be irreducible. Without using the data in Table 1, prove that each $\lambda_i$ is of the form $\sum \limits_j q_{ij}\alpha_j$, where all $q_{ij}$ are positive rational numbers. [Deduce from Exercise \ref{13.7} that all $q_{ij}$ are nonnegative. From $(\lambda_i, \lambda_i) > 0$, show that $q_{ii}>0$. Then show that if $q_{ij} > 0$ and $(\alpha_j, \alpha_k) < 0$, then $q_{ik} > 0$.]
 \end{ex}
+\begin{proof}
+	By Lemma 10.1, $\alpha_i$ form an obtuse basis. Therefore $(\lambda_i, \lambda_j) \geqslant 0$. Since
+	\[
+	(\lambda_i, \lambda_j) = (\sum_k q_{ik}\alpha_k, \lambda_j) = \sum_{k}q_{ik} (\alpha_k,\lambda_j) = \frac{q_{ij}}{2}(\alpha_j,\alpha_j),
+	\]
+	We have $q_{ij}\geqslant 0$. In particular, since $(\lambda_i, \lambda_i) > 0$, $q_{ii}>0$. Since $\Phi$ is irreducible, the Coxeter graph is connected. Thus for any $\alpha_j$, there exists some $\alpha_k$ such that $(\alpha_j, \alpha_k) < 0$. Follow a similar reasoning of Exercise \ref{13.7}, we see that all $(\lambda_i, \lambda_j)$ are positive. 
+\end{proof}
 
 \begin{ex}
   Let $\lambda\in \Lambda^{+}$. Prove that $\sigma(\lambda + \delta) - \delta$ is dominant only for $\sigma = 1$.
 \end{ex}
+\begin{proof}
+	Since $\delta$ is strongly dominant, we have
+	\[\delta\succ\sigma(\delta),\qquad\delta\succ\sigma^{-1}(\delta),\]
+	and the equality holds only for $\sigma = 1$.
+	Hence $(\sigma(\lambda + \delta) - \delta)\prec(\lambda + \delta - \sigma^{-1}(\delta))$ and the equality holds only for $\sigma = 1$.
+\end{proof}
 
 \begin{ex}
   If $\lambda\in \Lambda^{+}$, prove that the set $\Pi$ consisting of all dominant weights $\mu\prec\lambda$ and their $\Ww-$conjugates is saturated, as asserted in (13.4).
